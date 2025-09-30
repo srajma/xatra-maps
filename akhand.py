@@ -1,5 +1,3 @@
-"""The canonical 'Akhand Bharat' map."""
-
 from matplotlib.colors import LinearSegmentedColormap
 import xatra
 from xatra.loaders import gadm, naturalearth
