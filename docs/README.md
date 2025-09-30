@@ -6,6 +6,6 @@ Mostly a hub for maps made with [xatra](https://github.com/srajma/xatra), the be
 - [Modern continents (the only correct map)](continents_modern.png)
 - [Ancient city sizes](city_sizes.png)
 
-![](cisup.png)
+![](civsup.png)
 
 ![](continents_modern.png)
