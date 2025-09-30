@@ -7,7 +7,9 @@ from matplotlib.colors import LinearSegmentedColormap
 from xatra.loaders import gadm, naturalearth
 from xatra.territory_library import *
 from xatra.colorseq import LinearColorSequence
-
+import rivers_gangetic
+import rivers_peninsular
+import rivers_saptasindhu
 
 def add_flags(map: xatra.FlagMap):
     map.Flag(label="KASHMIR", value=KASHMIR)
@@ -82,15 +84,15 @@ def add_flags(map: xatra.FlagMap):
     map.Flag(label="KONGU", value=KONGU)
     map.Flag(label="SIMHALA", value=SIMHALA)
     map.Flag(label="COORG", value=COORG)
-    map.Flag(label="YYY_GREAT_FOREST", classes="wild-tracts", value=GREAT_FOREST)
-    map.Flag(label="YYY_KALAKAVANA", classes="wild-tracts", value=UP_KALAKAVANA)
-    map.Flag(label="YYY_MARU", classes="wild-tracts", value=RJ_MARU)
-    map.Flag(label="YYY_NAIMISA", classes="wild-tracts", value=UP_NAIMISA)
-    map.Flag(label="ZZZ_BAYALU", classes="names-unknown", value=BAYALU)
-    map.Flag(label="ZZZ_GREATER_PUNE", classes="names-unknown", value=GREATER_PUNE)
-    map.Flag(label="ZZZ_HADOTI", classes="names-unknown", value=HADOTI)
-    map.Flag(label="ZZZ_BIHAR_NORTHEAST", classes="names-unknown", value=BIHAR_NORTHEAST)
-    map.Flag(label="ZZZ_BAHAWALPUR", classes="names-unknown", value=BAHAWALPUR)
+    map.Flag(label="DANDAKARANYA", classes="wild-tracts", value=GREAT_FOREST)
+    map.Flag(label="KALAKAVANA", classes="wild-tracts", value=UP_KALAKAVANA)
+    map.Flag(label="MARU", classes="wild-tracts", value=RJ_MARU)
+    map.Flag(label="NAIMISA", classes="wild-tracts", value=UP_NAIMISA)
+    map.Flag(label="BAYALU", classes="names-unknown", value=BAYALU)
+    map.Flag(label="GREATER_PUNE", classes="names-unknown", value=GREATER_PUNE)
+    map.Flag(label="HADOTI", classes="names-unknown", value=HADOTI)
+    map.Flag(label="BIHAR_NORTHEAST", classes="names-unknown", value=BIHAR_NORTHEAST)
+    map.Flag(label="BAHAWALPUR", classes="names-unknown", value=BAHAWALPUR)
     map.CSS(r"""
     .names-unknown {fill: #444444;}
     .wild-tracts {fill: #888888;}
@@ -103,11 +105,18 @@ if __name__ == "__main__":
     map.BaseOption("Esri.WorldImagery")
     map.BaseOption("OpenTopoMap")
     map.BaseOption("Esri.WorldPhysical")
+    rivers_gangetic.add_flags(map)
+    rivers_peninsular.add_flags(map)
+    rivers_saptasindhu.add_flags(map)
     add_flags(map)
-    map.TextBox("""
+    map.TitleBox("""
     Nations, not states, of the Indian core in antiquity. 
     Roughly valid in the period 800 BC to 1200, think of it as a 
     first-order approximation or a reference guide. 
+    <br>
+    Light grey are wild tracts, dark grey are regions whose names
+    in that time are unknown to me.
+    <br>
     """)
-    map.show()
+    map.show(out_json="out/nations_india.json", out_html="out/nations_india.html")
 

@@ -2,11 +2,11 @@
 the ancient period. Can be regarded as a first-order approximation,
 roughly valid in the period between 800 BC and 800 AD."""
 
+from matplotlib.colors import LinearSegmentedColormap
 import xatra
 from xatra.loaders import gadm, naturalearth
 from xatra.territory_library import *
 from xatra.colorseq import LinearColorSequence
-from matplotlib.colors import LinearSegmentedColormap
 
 def add_flags(map: xatra.FlagMap):
     map.Flag(label="ZZZ_TIBET_BURMA_INTERM", classes="names-unknown", value=TIBET_BURMA_INTERM)
@@ -43,10 +43,10 @@ if __name__ == "__main__":
     map.BaseOption("OpenTopoMap")
     map.BaseOption("Esri.WorldPhysical")
     add_flags(map)
-    map.TextBox("""
+    map.TitleBox("""
     Nations, not states, of the Maritime Silk Road in antiquity. 
     Roughly valid in the period 800 BC to 1200, think of it as a 
     first-order approximation or a reference guide. 
     """)
-    map.show()
+    map.show(out_json="out/nations_silkroad_maritime.json", out_html="out/nations_silkroad_maritime.html")
 

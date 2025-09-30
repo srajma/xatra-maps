@@ -47,10 +47,10 @@ if __name__ == "__main__":
     map.BaseOption("OpenTopoMap")
     map.BaseOption("Esri.WorldPhysical")
     add_flags(map)
-    map.TextBox("""
+    map.TitleBox("""
     Nations, not states, of the Overland Silk Road in antiquity. 
     Roughly valid in the period 800 BC to 1200, think of it as a 
     first-order approximation or a reference guide. 
     """)
-    map.show()
+    map.show(out_json="out/nations_silkroad_overland.json", out_html="out/nations_silkroad_overland.html")
 

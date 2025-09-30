@@ -12,3 +12,6 @@ def add_flags(map: xatra.FlagMap):
     map.River(label="Satadru (sutlej)", value=overpass("325142"))
     map.River(label="Campavipasa (beas)", value=overpass("10693630"))
     map.River(label="Sarasvati (ghaggar)", value=overpass("5388381"))
+    map.CSS(r"""
+    .river {stroke-width: 3;}
+    """)
