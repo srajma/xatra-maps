@@ -10,5 +10,5 @@ wheels/
 .venv
 
 # temp
-out/*.html
-out/*.json
+# docs/*.html
+docs/*.json

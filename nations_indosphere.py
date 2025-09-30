@@ -33,6 +33,6 @@ if __name__ == "__main__":
     first-order approximation or a reference guide. 
     """)
     map.show(
-        out_json="out/nations_indosphere.json",
-        out_html="out/nations_indosphere.html",
+        out_json="docs/nations_indosphere.json",
+        out_html="docs/nations_indosphere.html",
     )

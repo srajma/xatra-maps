@@ -79,4 +79,4 @@ Greater Indian Sphere.<br>
     .explored {fill: #698db3; color: #698db3 !important;}
     .himalayas {fill: #ff0000; color: #ff0000 !important;}
     """)
-    map.show(out_json="out/akhand.json", out_html="out/akhand.html")
+    map.show(out_json="docs/akhand.json", out_html="docs/akhand.html")
