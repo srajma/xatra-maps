@@ -35,8 +35,8 @@ def add_flags(map: xatra.FlagMap):
     map.Flag(label="TIBET", value=TIBET)
     map.Flag(label="YYY_HIMALAYAN", classes="wild-tracts", value=HIMALAYAN)
     map.CSS(r"""
-    .names-unknown {fill: #444444;}
-    .wild-tracts {fill: #888888;}
+    .names-unknown {fill: #444444; color: #444444 !important;}
+    .wild-tracts {fill: #888888; color: #888888 !important;}
     """
     )
 

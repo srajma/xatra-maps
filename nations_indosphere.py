@@ -19,11 +19,6 @@ def add_flags(map: xatra.FlagMap):
     rivers_saptasindhu.add_flags(map)
     rivers_silkrd.add_flags(map)
 
-    map.CSS(r"""
-    .names-unknown {fill: #444444;}
-    .wild-tracts {fill: #888888;}
-    """)
-
 
 if __name__ == "__main__":
     map = xatra.FlagMap()

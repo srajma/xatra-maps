@@ -2,8 +2,8 @@
 Can be regarded as a first-order approximation, roughly valid in  
 the period between 800 BC and 800 AD."""
 
-import xatra
 from matplotlib.colors import LinearSegmentedColormap
+import xatra
 from xatra.loaders import gadm, naturalearth
 from xatra.territory_library import *
 from xatra.colorseq import LinearColorSequence
@@ -94,8 +94,8 @@ def add_flags(map: xatra.FlagMap):
     map.Flag(label="BIHAR_NORTHEAST", classes="names-unknown", value=BIHAR_NORTHEAST)
     map.Flag(label="BAHAWALPUR", classes="names-unknown", value=BAHAWALPUR)
     map.CSS(r"""
-    .names-unknown {fill: #444444;}
-    .wild-tracts {fill: #888888;}
+    .names-unknown {fill: #444444; color: #444444 !important;}
+    .wild-tracts {fill: #888888; color: #888888 !important;}
     """
     )
 

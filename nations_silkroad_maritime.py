@@ -31,8 +31,8 @@ def add_flags(map: xatra.FlagMap):
     map.Flag(label="ZZZ_BANGKA", classes="names-unknown", value=BANGKA)
     map.Flag(label="ANDAMAN_NICOBAR", value=ANDAMAN_NICOBAR)
     map.CSS(r"""
-    .names-unknown {fill: #444444;}
-    .wild-tracts {fill: #888888;}
+    .names-unknown {fill: #444444; color: #444444 !important;}
+    .wild-tracts {fill: #888888; color: #888888 !important;}
     """
     )
 
