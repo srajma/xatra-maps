@@ -12,3 +12,7 @@ wheels/
 # temp
 # docs/*.html
 docs/*.json
+
+DOSE_V2.9.csv
+gdp_per_capita_map.html
+gdp_per_capita_map.json
