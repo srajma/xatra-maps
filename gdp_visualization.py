@@ -110,7 +110,7 @@ def create_gdp_visualization(df_pivot):
     # Add title and description
     map_obj.TitleBox("""
     <h2>GDP per Capita - Indian Subcontinent</h2>
-    <p><b>Data Source:</b> DOSE V2.9 Database</p>
+    <p><b>Data Source:</b> <a href="https://zenodo.org/records/13773040">DOSE V2.9 Database</a></p>
     <p><b>Countries:</b> India, Pakistan, Bangladesh, Sri Lanka, Nepal, Bhutan</p>
     <p><b>Years:</b> 1980-2020</p>
     <p><b>Level:</b> GADM Level-1 Subdivisions (States/Provinces)</p>
