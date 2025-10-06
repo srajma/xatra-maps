@@ -34,6 +34,8 @@ def load_and_process_data(csv_file):
     df = df.dropna(subset=['grp_pc_usd', 'GID_1'])
     
     # Convert GID_1 to proper format for xatra (remove the _1 suffix)
+    # Replace specific GID "IND.14_1" with "Z01.14_1"
+    df['GID_1'] = df['GID_1'].str.replace('IND.14_1', 'Z01.14_1')
     df['GID_1_clean'] = df['GID_1'].str.replace('_1', '')
     
     print(f"Data loaded: {len(df)} records")
@@ -64,8 +66,17 @@ def create_dataframe_for_xatra(df):
     # Set GID as index
     pivot_df = pivot_df.set_index('GID')
     
-    # Fill missing values with NaN (xatra will handle these)
-    pivot_df = pivot_df.fillna(np.nan)
+    # Interpolation -- doesn't work great.
+    # # Ensure columns are numeric for interpolation
+    # pivot_df.columns = pd.to_numeric(pivot_df.columns)
+    
+    # # Apply spline interpolation to fill missing values along the columns (years)
+    # print("Applying spline interpolation to fill missing values...")
+    # # Transpose to make years the index, apply interpolation, then transpose back
+    # pivot_df = pivot_df.T.interpolate(method='spline', order=2, limit_direction='both').T
+    
+    # # Fill any remaining missing values with NaN (xatra will handle these)
+    # pivot_df = pivot_df.fillna(np.nan)
     
     print(f"Pivot DataFrame shape: {pivot_df.shape}")
     print(f"Columns (years): {list(pivot_df.columns)}")
@@ -208,14 +219,14 @@ def main():
     # Export the map
     print("Exporting map...")
     map_obj.show(
-        out_json="docs/gdp_per_capita_map.json",
-        out_html="docs/gdp_per_capita_map.html"
+        out_json="docs/subcontinent_gdp_pc.json",
+        out_html="docs/subcontinent_gdp_pc.html"
     )
     
     print("Visualization complete!")
     print("Files created:")
-    print("- gdp_per_capita_map.html")
-    print("- gdp_per_capita_map.json")
+    print("- subcontinent_gdp_pc.html")
+    print("- subcontinent_gdp_pc.json")
 
 if __name__ == "__main__":
     main()
