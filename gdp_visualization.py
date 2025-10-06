@@ -9,8 +9,9 @@ import pandas as pd
 import xatra
 import numpy as np
 
-# from matplotlib.colors import LinearSegmentedColormap
+from matplotlib.colors import LinearSegmentedColormap
 import matplotlib.pyplot as plt
+from matplotlib.colors import LogNorm
 
 
 def load_and_process_data(csv_file):
@@ -123,9 +124,10 @@ def create_gdp_visualization(df_pivot):
     map_obj.BaseOption("Esri.WorldPhysical")
 
     # # Set up a custom colormap for GDP data (green to red gradient)
-    # colors = ['#2E8B57', '#32CD32', '#FFD700', '#FF8C00', '#FF4500', '#DC143C']
-    # custom_cmap = LinearSegmentedColormap.from_list('gdp_colormap', colors)
+    colors = ['#2E8B57', '#32CD32', '#FFD700', '#FF8C00', '#FF4500', '#DC143C']
+    custom_cmap = LinearSegmentedColormap.from_list('gdp_colormap', colors)
     # map_obj.DataColormap(custom_cmap)
+    map_obj.DataColormap(colormap=custom_cmap,norm=LogNorm())
 
     # Add the DataFrame data
     map_obj.Dataframe(df_pivot)
