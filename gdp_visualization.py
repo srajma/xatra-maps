@@ -124,9 +124,11 @@ def create_gdp_visualization(df_pivot):
     map_obj.BaseOption("Esri.WorldPhysical")
 
     # # Set up a custom colormap for GDP data (green to red gradient)
-    colors = ['#2E8B57', '#32CD32', '#FFD700', '#FF8C00', '#FF4500', '#DC143C']
+    # colors = ['#2E8B57', '#32CD32', '#FFD700', '#FF8C00', '#FF4500', '#DC143C']
+    # colors = ['green', 'yellow', 'red']
+    colors = ['white', 'blue', 'black']
     custom_cmap = LinearSegmentedColormap.from_list('gdp_colormap', colors)
-    # map_obj.DataColormap(custom_cmap)
+    map_obj.DataColormap(custom_cmap)
     map_obj.DataColormap(colormap=custom_cmap,norm=LogNorm())
 
     # Add the DataFrame data
