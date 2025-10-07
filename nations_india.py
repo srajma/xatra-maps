@@ -105,10 +105,10 @@ if __name__ == "__main__":
     map.BaseOption("Esri.WorldImagery")
     map.BaseOption("OpenTopoMap")
     map.BaseOption("Esri.WorldPhysical")
+    add_flags(map)
     rivers_gangetic.add_flags(map)
     rivers_peninsular.add_flags(map)
     rivers_saptasindhu.add_flags(map)
-    add_flags(map)
     map.TitleBox("""
     Nations, not states, of the Indian core in antiquity. 
     Roughly valid in the period 800 BC to 1200, think of it as a 
