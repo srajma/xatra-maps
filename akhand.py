@@ -34,7 +34,7 @@ EXPLORED = (MEDITERRANEAN_EAST | AFRICA_EAST_SPOTTY | GULF | LEVANT | IRANIC) - 
 )
 
 if __name__ == "__main__":
-    map = xatra.FlagMap()
+    map = xatra.Map()
     map.BaseOption("OpenStreetMap", default=True)
     map.BaseOption("Esri.WorldImagery")
     map.BaseOption("OpenTopoMap")

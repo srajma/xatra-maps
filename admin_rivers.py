@@ -1,11 +1,11 @@
 import xatra
 
-def add_flags(map: xatra.FlagMap):
+def add_flags(map: xatra.Map):
     map.AdminRivers(sources=["naturalearth", "overpass"])
     map.CSS(r""".river {stroke-width: 5;}""")
 
 if __name__ == "__main__":
-    m = xatra.FlagMap()
+    m = xatra.Map()
     m.BaseOption("OpenStreetMap", default=True)
     m.BaseOption("Esri.WorldImagery")
     m.BaseOption("OpenTopoMap")

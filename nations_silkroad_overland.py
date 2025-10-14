@@ -8,7 +8,7 @@ from xatra.territory_library import *
 from xatra.colorseq import LinearColorSequence
 from matplotlib.colors import LinearSegmentedColormap
 
-def add_flags(map: xatra.FlagMap):
+def add_flags(map: xatra.Map):
     map.Flag(label="DARADA", value=DARADA)
     map.Flag(label="MARASA", value=LADAKH)
     map.Flag(label="INNER_KAMBOJA", value=INNER_KAMBOJA)
@@ -41,7 +41,7 @@ def add_flags(map: xatra.FlagMap):
     )
 
 if __name__ == "__main__":
-    map = xatra.FlagMap()
+    map = xatra.Map()
     map.BaseOption("OpenStreetMap", default=True)
     map.BaseOption("Esri.WorldImagery")
     map.BaseOption("OpenTopoMap")

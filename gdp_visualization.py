@@ -115,7 +115,7 @@ def create_gdp_visualization(df_pivot):
     print("Creating xatra visualization...")
 
     # Create the map
-    map_obj = xatra.FlagMap()
+    map_obj = xatra.Map()
 
     # Add base map options
     map_obj.BaseOption("OpenStreetMap", default=True)

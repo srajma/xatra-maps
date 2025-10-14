@@ -4,7 +4,7 @@ from xatra.territory_library import *
 from xatra.colorseq import LinearColorSequence
 from matplotlib.colors import LinearSegmentedColormap
 
-def add_flags(map: xatra.FlagMap):
+def add_flags(map: xatra.Map):
     map.River(label="Sindhu", value=overpass("1159233"), show_label=True)
     map.River(label="Vitasta (jhelum)", value=overpass("8306691"), show_label=True)
     map.River(label="Chandrabhaga (chenab)", value=overpass("6085682"), show_label=True)

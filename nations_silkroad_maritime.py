@@ -8,7 +8,7 @@ from xatra.loaders import gadm, naturalearth
 from xatra.territory_library import *
 from xatra.colorseq import LinearColorSequence
 
-def add_flags(map: xatra.FlagMap):
+def add_flags(map: xatra.Map):
     map.Flag(label="ZZZ_TIBET_BURMA_INTERM", classes="names-unknown", value=TIBET_BURMA_INTERM)
     map.Flag(label="ZZZ_YUNNAN_BURMA_INTERM", classes="names-unknown", value=YUNNAN_BURMA_INTERM)
     map.Flag(label="ZZZ_KAREN", classes="names-unknown", value=KAREN)
@@ -37,7 +37,7 @@ def add_flags(map: xatra.FlagMap):
     )
 
 if __name__ == "__main__":
-    map = xatra.FlagMap()
+    map = xatra.Map()
     map.BaseOption("OpenStreetMap", default=True)
     map.BaseOption("Esri.WorldImagery")
     map.BaseOption("OpenTopoMap")

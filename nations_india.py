@@ -11,7 +11,7 @@ import rivers_gangetic
 import rivers_peninsular
 import rivers_saptasindhu
 
-def add_flags(map: xatra.FlagMap):
+def add_flags(map: xatra.Map):
     map.Flag(label="KASHMIR", value=KASHMIR)
     map.Flag(label="JAMMU", value=JAMMU)
     map.Flag(label="KASHMIR_TBC", value=KASHMIR_TBC)
@@ -100,7 +100,7 @@ def add_flags(map: xatra.FlagMap):
     )
 
 if __name__ == "__main__":
-    map = xatra.FlagMap()
+    map = xatra.Map()
     map.BaseOption("OpenStreetMap", default=True)
     map.BaseOption("Esri.WorldImagery")
     map.BaseOption("OpenTopoMap")

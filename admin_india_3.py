@@ -9,7 +9,7 @@ import rivers_peninsular
 import rivers_saptasindhu
 import rivers_silkrd
 
-def add_flags(map: xatra.FlagMap):
+def add_flags(map: xatra.Map):
     map.Admin(gadm="IND", level=3, color_by_level=2)
     map.Admin(gadm="PAK", level=3, color_by_level=2) # level-3 GADM divisions in Pak are more like districts, but we don't have finer data
     map.Admin(gadm="BGD", level=3, color_by_level=2)
@@ -20,7 +20,7 @@ def add_flags(map: xatra.FlagMap):
 
 
 if __name__ == "__main__":
-    map = xatra.FlagMap()
+    map = xatra.Map()
     map.BaseOption("OpenStreetMap", default=True)
     map.BaseOption("Esri.WorldImagery")
     map.BaseOption("OpenTopoMap")

@@ -10,7 +10,7 @@ from matplotlib.colors import LinearSegmentedColormap
 import nations_india, nations_silkroad_maritime, nations_silkroad_overland, rivers_gangetic, rivers_peninsular, rivers_saptasindhu, rivers_silkrd
 
 
-def add_flags(map: xatra.FlagMap):
+def add_flags(map: xatra.Map):
     nations_india.add_flags(map)
     nations_silkroad_maritime.add_flags(map)
     nations_silkroad_overland.add_flags(map)
@@ -21,7 +21,7 @@ def add_flags(map: xatra.FlagMap):
 
 
 if __name__ == "__main__":
-    map = xatra.FlagMap()
+    map = xatra.Map()
     map.BaseOption("OpenStreetMap", default=True)
     map.BaseOption("Esri.WorldImagery")
     map.BaseOption("OpenTopoMap")
@@ -36,3 +36,4 @@ if __name__ == "__main__":
         out_json="docs/nations_indosphere.json",
         out_html="docs/nations_indosphere.html",
     )
+    
