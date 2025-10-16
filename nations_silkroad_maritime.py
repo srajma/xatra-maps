@@ -33,6 +33,9 @@ def add_flags(map: xatra.Map):
     map.CSS(r"""
     .names-unknown {fill: #444444; color: #444444 !important;}
     .wild-tracts {fill: #888888; color: #888888 !important;}
+    .flag-label {font-size: 10px}
+    .path-label {font-size: 10px}
+    .river-label {font-size: 10px}
     """
     )
 

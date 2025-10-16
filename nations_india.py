@@ -35,7 +35,7 @@ def add_flags(map: xatra.Map):
     map.Flag(label="MATSYA", value=MATSYA)
     map.Flag(label="BRAHMAVARTA", value=BRAHMAVARTA)
     map.Flag(label="KURU_PROPER", value=KURU_PROPER)
-    map.Flag(label="KURU_KSETRA_GREATER", value=KURU_KSETRA_GREATER)
+    map.Flag(label="KURUKSETRA", value=KURU_KSETRA_GREATER)
     map.Flag(label="JANGALA", value=JANGALA)
     map.Flag(label="PANCALA_N", value=PANCALA_N)
     map.Flag(label="PANCALA_S", value=PANCALA_S)
@@ -89,13 +89,16 @@ def add_flags(map: xatra.Map):
     map.Flag(label="MARU", classes="wild-tracts", value=RJ_MARU)
     map.Flag(label="NAIMISA", classes="wild-tracts", value=UP_NAIMISA)
     map.Flag(label="BAYALU", classes="names-unknown", value=BAYALU)
-    map.Flag(label="GREATER_PUNE", classes="names-unknown", value=GREATER_PUNE)
+    map.Flag(label="PUNE", classes="names-unknown", value=GREATER_PUNE)
     map.Flag(label="HADOTI", classes="names-unknown", value=HADOTI)
-    map.Flag(label="BIHAR_NORTHEAST", classes="names-unknown", value=BIHAR_NORTHEAST)
+    map.Flag(label="BIHAR_NE", classes="names-unknown", value=BIHAR_NORTHEAST)
     map.Flag(label="BAHAWALPUR", classes="names-unknown", value=BAHAWALPUR)
     map.CSS(r"""
     .names-unknown {fill: #444444; color: #444444 !important;}
     .wild-tracts {fill: #888888; color: #888888 !important;}
+    .flag-label {font-size: 10px}
+    .path-label {font-size: 10px}
+    .river-label {font-size: 10px}
     """
     )
 
