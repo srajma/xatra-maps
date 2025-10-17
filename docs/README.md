@@ -2,6 +2,8 @@ Mostly a hub for maps made with [xatra](https://github.com/srajma/xatra), the be
 
 - [Ancient nations of the Indosphere](nations_indosphere)
 - [Ancient nations of India](nations_india)
+- [Sea routes of ancient India](sea)
+- [Early Suvarṇabhūmī](suvarnabhumi)
 - [Indian interactions with the world](akhand)
 - [Pre-modern history summarized](civsup.png)
 - [Modern continents (the only correct map)](continents_modern.png)
