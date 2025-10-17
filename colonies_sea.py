@@ -82,10 +82,10 @@ def add_flags(map: xatra.Map):
             font-weight: bold;
         }
         .general-label-sea-kataha {
-            transform: rotate(60deg);
+            transform: rotate(60deg) !important;
         }
         .general-label-sea-dvipantara {
-            transform: rotate(-20deg);
+            transform: rotate(-20deg) !important;
         }
         .general-label-sea-suvarnabhumi {
             font-size: 18pt;
@@ -103,7 +103,7 @@ if __name__ == "__main__":
     map.BaseOption("Esri.WorldPhysical", default=True)
     nations_silkroad_maritime.add_flags(map)
     add_flags(map)
-    map.TitleBox("""
+    map.TitleBox(f"""
     Earliest recorded Indian colonies and states in Southeast Asia, c. 1st and 2nd centuries. 
     <br>
     Sources:
@@ -111,5 +111,7 @@ if __name__ == "__main__":
     <br>
     Moti Chandra (1977), Trade and Trade Routes in Ancient India. p. 132-133, xiv
     <br>
+    {PORT_ICON.to_html()} <span style="color:black">Cities and ports mentioned in Indian literature</span>
+    {CITY_ICON.to_html()} <span style="color:blue">Capitals of Indian(-ized) states known from local or Chinese history</span><br>
     """)
     map.show(out_json="docs/suvarnabhumi.json", out_html="docs/suvarnabhumi.html")
