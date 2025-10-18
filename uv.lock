@@ -334,7 +334,7 @@ wheels = [
 [[package]]
 name = "maps"
 version = "0.1.0"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
     { name = "scipy" },
     { name = "xatra" },
@@ -910,7 +910,7 @@ wheels = [
 
 [[package]]
 name = "xatra"
-version = "2.0.0"
+version = "2.6.0"
 source = { editable = "../xatra2" }
 dependencies = [
     { name = "geojson" },
