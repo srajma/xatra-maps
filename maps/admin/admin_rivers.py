@@ -1,4 +1,5 @@
 import xatra
+import maps.base_options
 
 def add_flags(map: xatra.Map):
     map.AdminRivers(sources=["naturalearth", "overpass"])
@@ -6,10 +7,7 @@ def add_flags(map: xatra.Map):
 
 if __name__ == "__main__":
     m = xatra.Map()
-    m.BaseOption("OpenStreetMap", default=True)
-    m.BaseOption("Esri.WorldImagery")
-    m.BaseOption("OpenTopoMap")
-    m.BaseOption("Esri.WorldPhysical")
+    maps.base_options.add_flags(m)
     add_flags(m)
     m.TitleBox("""Rivers.""")
 

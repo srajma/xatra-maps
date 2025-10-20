@@ -1,9 +1,10 @@
 import xatra
 from xatra.territory_library import *
 from xatra import Icon
-import nations_silkroad_maritime
+# import maps.nations.nations_silkroad_maritime
 import sea_suvarnabhumi
 from sea_suvarnabhumi import CITY_ICON, PORT_ICON, REF_MOTI_CHANDRA, REF_MAJUMDAR, colon
+import maps.base_options
 
 def add_flags(map: xatra.Map):
     map.Flag(label="SUVARṆABHŪMĪ", value=SEA)
@@ -227,10 +228,7 @@ def add_flags(map: xatra.Map):
 
 if __name__ == "__main__":
     map = xatra.Map()
-    map.BaseOption("OpenStreetMap")
-    map.BaseOption("Esri.WorldImagery")
-    map.BaseOption("OpenTopoMap")
-    map.BaseOption("Esri.WorldPhysical", default=True)
+    maps.base_options.add_flags(map, default="Esri.WorldPhysical")
     add_flags(map)
     map.TitleBox(f"""
     Sea routes of India < 300 AD. Southeast Asia shows states and colonies in 1st and 2nd centuries. 

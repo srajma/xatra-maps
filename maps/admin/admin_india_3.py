@@ -8,6 +8,7 @@ import maps.rivers.rivers_gangetic
 import maps.rivers.rivers_peninsular
 import maps.rivers.rivers_saptasindhu
 import maps.rivers.rivers_silkrd
+import maps.base_options
 
 def add_flags(map: xatra.Map):
     map.Admin(gadm="IND", level=3, color_by_level=2)
@@ -21,10 +22,7 @@ def add_flags(map: xatra.Map):
 
 if __name__ == "__main__":
     map = xatra.Map()
-    map.BaseOption("OpenStreetMap", default=True)
-    map.BaseOption("Esri.WorldImagery")
-    map.BaseOption("OpenTopoMap")
-    map.BaseOption("Esri.WorldPhysical")
+    maps.base_options.add_flags(map)
     add_flags(map)
     maps.rivers.rivers_gangetic.add_flags(map)
     maps.rivers.rivers_peninsular.add_flags(map)

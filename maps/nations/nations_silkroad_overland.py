@@ -7,11 +7,11 @@ from xatra.loaders import gadm, naturalearth
 from xatra.territory_library import *
 from xatra.colorseq import LinearColorSequence
 from matplotlib.colors import LinearSegmentedColormap
+import maps.base_options
 
 def add_flags(map: xatra.Map):
     map.Flag(label="DARADA", value=DARADA)
     map.Flag(label="MARASA", value=LADAKH)
-    map.Flag(label="INNER_KAMBOJA", value=INNER_KAMBOJA)
     map.Flag(label="GEDROSIA", value=BALOCH)
     map.Flag(label="KAMBOJA", value=KAMBOJA)
     map.Flag(label="MERU", value=MERU)
@@ -46,10 +46,7 @@ def add_flags(map: xatra.Map):
 
 if __name__ == "__main__":
     map = xatra.Map()
-    map.BaseOption("OpenStreetMap", default=True)
-    map.BaseOption("Esri.WorldImagery")
-    map.BaseOption("OpenTopoMap")
-    map.BaseOption("Esri.WorldPhysical")
+    maps.base_options.add_flags(map)
     add_flags(map)
     map.TitleBox("""
     Nations, not states, of the Overland Silk Road in antiquity. 

@@ -4,6 +4,7 @@ import xatra
 from xatra.territory_library import *
 from xatra import Icon
 import maps.nations.nations_silkroad_maritime
+import maps.base_options
 
 # CITY_ICON = None
 # PORT_ICON = Icon.builtin("marker-icon-red.png")
@@ -100,11 +101,8 @@ def add_flags(map: xatra.Map):
 
 if __name__ == "__main__":
     map = xatra.Map()
-    map.BaseOption("OpenStreetMap")
-    map.BaseOption("Esri.WorldImagery")
-    map.BaseOption("OpenTopoMap")
-    map.BaseOption("Esri.WorldPhysical", default=True)
-    maps.rivers.nations_silkroad_maritime.add_flags(map)
+    maps.base_options.add_flags(map, default="Esri.WorldPhysical")
+    maps.nations.nations_silkroad_maritime.add_flags(map)
     add_flags(map)
     map.TitleBox(f"""
     Earliest recorded Indian colonies and states in Southeast Asia, c. 1st and 2nd centuries. 

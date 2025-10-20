@@ -10,7 +10,7 @@ from xatra.colorseq import LinearColorSequence
 import maps.rivers.rivers_gangetic as rivers_gangetic
 import maps.rivers.rivers_peninsular as rivers_peninsular
 import maps.rivers.rivers_saptasindhu as rivers_saptasindhu
-
+import maps.base_options
 def add_flags(map: xatra.Map):
     map.Flag(label="KASHMIR", value=KASHMIR)
     map.Flag(label="JAMMU", value=JAMMU)
@@ -19,6 +19,8 @@ def add_flags(map: xatra.Map):
     map.Flag(label="JAMMU", value= JAMMU)
     map.Flag(label="VARNU", value=VARNU)
     map.Flag(label="VANAVYA", value=VANAVYA)
+    map.Flag(label="VṚJISTHĀNA", value=VRJISTHANA, note="Vijayendra Kumar Mathur (1969), Aitihasik Sthanavali p 870: वृजिस्थान नामक एक ऐतिहासिक स्थान का उल्लेख प्रसिद्ध चीनी यात्री युवानच्वांग ने 'फो-लि शतंगना' नाम से किया है। सम्भवत: यह वर्तमान वज़ीरस्तान (पाकिस्तान) है।")
+    map.Flag(label="KAMBOJA", value=KAMBOJA)
     map.Flag(label="GANDHĀRA", value=GANDHARA)
     map.Flag(label="KEKAYA", value=DOAB_IJ)
     map.Flag(
@@ -160,10 +162,7 @@ def add_flags(map: xatra.Map):
 
 if __name__ == "__main__":
     map = xatra.Map()
-    map.BaseOption("OpenStreetMap", default=True)
-    map.BaseOption("Esri.WorldImagery")
-    map.BaseOption("OpenTopoMap")
-    map.BaseOption("Esri.WorldPhysical")
+    maps.base_options.add_flags(map)
     add_flags(map)
     rivers_gangetic.add_flags(map)
     rivers_peninsular.add_flags(map)

@@ -8,6 +8,7 @@ from xatra.territory_library import *
 from xatra.colorseq import LinearColorSequence
 import maps.rivers.rivers_saptasindhu
 import maps.rivers.rivers_silkrd
+import maps.base_options
 
 MOUNTAIN_ICON = Icon.geometric("triangle")
 
@@ -54,6 +55,7 @@ def add_flags(map: xatra.Map):
     )
     map.Flag(label="KAŚMĪRA", value=KASHMIR)
     map.Flag(label="GANDHĀRA", value=GANDHARA)
+    map.Flag(label="VṚJISTHĀNA", value=VRJISTHANA, note="Vijayendra Kumar Mathur (1969), Aitihasik Sthanavali p 870: वृजिस्थान नामक एक ऐतिहासिक स्थान का उल्लेख प्रसिद्ध चीनी यात्री युवानच्वांग ने 'फो-लि शतंगना' नाम से किया है। सम्भवत: यह वर्तमान वज़ीरस्तान (पाकिस्तान) है।")
     map.Flag(label="VANAVYA", value=VANAVYA)
     map.Flag(label="VARNU", value=VARNU)
     map.Flag(label="KEKAYA", value=DOAB_IJ)
@@ -261,10 +263,7 @@ It is mentioned in Paniru's sūtra V. 2.71. Patañjali definitely calls it a jan
 
 if __name__ == "__main__":
     map = xatra.Map()
-    map.BaseOption("OpenStreetMap", default=True)
-    map.BaseOption("Esri.WorldImagery")
-    map.BaseOption("OpenTopoMap")
-    map.BaseOption("Esri.WorldPhysical")
+    maps.base_options.add_flags(map)
     add_flags(map)
     maps.rivers.rivers_saptasindhu.add_flags(map)
     map.River(label="Kubha", value=overpass("1676476"), note="Kabul")

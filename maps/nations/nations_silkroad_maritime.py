@@ -7,6 +7,7 @@ import xatra
 from xatra.loaders import gadm, naturalearth
 from xatra.territory_library import *
 from xatra.colorseq import LinearColorSequence
+import maps.base_options
 
 def add_flags(map: xatra.Map):
     map.Flag(label="ZZZ_TIBET_BURMA_INTERM", classes="names-unknown", value=TIBET_BURMA_INTERM)
@@ -41,10 +42,7 @@ def add_flags(map: xatra.Map):
 
 if __name__ == "__main__":
     map = xatra.Map()
-    map.BaseOption("OpenStreetMap", default=True)
-    map.BaseOption("Esri.WorldImagery")
-    map.BaseOption("OpenTopoMap")
-    map.BaseOption("Esri.WorldPhysical")
+    maps.base_options.add_flags(map)
     add_flags(map)
     map.TitleBox("""
     Nations, not states, of the Maritime Silk Road in antiquity. 

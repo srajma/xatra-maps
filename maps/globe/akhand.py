@@ -7,6 +7,7 @@ import maps.rivers.rivers_gangetic
 import maps.rivers.rivers_peninsular
 import maps.rivers.rivers_saptasindhu
 import maps.rivers.rivers_silkrd
+import maps.base_options
 
 FUNDAMENTAL_COLONIES = SEA | NEI_HIM | TARIM | SOCOTRA
 BRIEF_COLONIES = (
@@ -35,10 +36,7 @@ EXPLORED = (MEDITERRANEAN_EAST | AFRICA_EAST_SPOTTY | GULF | LEVANT | IRANIC) - 
 
 if __name__ == "__main__":
     map = xatra.Map()
-    map.BaseOption("OpenStreetMap", default=True)
-    map.BaseOption("Esri.WorldImagery")
-    map.BaseOption("OpenTopoMap")
-    map.BaseOption("Esri.WorldPhysical")
+    maps.base_options.add_flags(map)
     map.Flag(label="INDIAN CORE", value=SUBCONTINENT_PROPER, classes="indian-core")
     map.Flag(
         label="FUNDAMENTAL COLONIES",

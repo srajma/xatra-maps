@@ -1,6 +1,6 @@
 import xatra
 from xatra.territory_library import *
-
+import maps.base_options
 
 CITIES = {
     "Delhi": [28.7041, 77.1025],
@@ -359,10 +359,7 @@ def add_flags(map: xatra.Map):
 
 if __name__ == "__main__":
     map = xatra.Map()
-    map.BaseOption("OpenStreetMap", default=True)
-    map.BaseOption("Esri.WorldImagery")
-    map.BaseOption("OpenTopoMap")
-    map.BaseOption("Esri.WorldPhysical")
+    maps.base_options.add_flags(map)
     add_flags(map)
     map.TitleBox(f"""
         <p><b>High-speed rail network to BVILD</b></p>

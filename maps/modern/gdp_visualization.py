@@ -12,7 +12,7 @@ import numpy as np
 from matplotlib.colors import LinearSegmentedColormap
 import matplotlib.pyplot as plt
 from matplotlib.colors import LogNorm
-
+import maps.base_options
 
 def load_and_process_data(csv_file):
     """Load and process the DOSE data for GDP per capita visualization."""
@@ -118,10 +118,7 @@ def create_gdp_visualization(df_pivot):
     map_obj = xatra.Map()
 
     # Add base map options
-    map_obj.BaseOption("OpenStreetMap", default=True)
-    map_obj.BaseOption("Esri.WorldImagery")
-    map_obj.BaseOption("OpenTopoMap")
-    map_obj.BaseOption("Esri.WorldPhysical")
+    maps.base_options.add_flags(map_obj)
 
     # # Set up a custom colormap for GDP data (green to red gradient)
     # colors = ['#2E8B57', '#32CD32', '#FFD700', '#FF8C00', '#FF4500', '#DC143C']
