@@ -2,6 +2,7 @@ Mostly a hub for maps made with [xatra](https://github.com/srajma/xatra), the be
 
 - [Ancient nations of the Indosphere](nations_indosphere)
 - [Ancient nations of India](nations_india)
+- [North-western India as known to Pāṇini](nw_panini)
 - [Sea routes of ancient India](sea)
 - [Early Suvarṇabhūmī](suvarnabhumi)
 - [Indian interactions with the world](akhand)
