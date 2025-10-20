@@ -17,6 +17,7 @@ def add_flags(map: xatra.Map):
     map.Flag(label="MERU", value=MERU)
     map.Flag(label="ZARANJ", value=ZARANJ)
     map.Flag(label="KANDAHAR", value=KANDAHAR)
+    map.Flag(label="ROHITAGIRI", value=ROHITAGIRI, classes="wild-tracts")
     map.Flag(label="HERAT", value=HERAT)
     map.Flag(label="MARGIANA", value=MARGIANA)
     map.Flag(label="BACTRIA", value=BACTRIA)

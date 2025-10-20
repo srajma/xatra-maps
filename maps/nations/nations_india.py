@@ -14,19 +14,75 @@ import maps.rivers.rivers_saptasindhu as rivers_saptasindhu
 def add_flags(map: xatra.Map):
     map.Flag(label="KASHMIR", value=KASHMIR)
     map.Flag(label="JAMMU", value=JAMMU)
-    map.Flag(label="KASHMIR_TBC", value=KASHMIR_TBC)
-    map.Flag(label="VARNU", value=PSEUDOSATTAGYDIA)
-    map.Flag(label="SINDH", value=SINDH)
-    map.Flag(label="GANDHARA_W", value=GANDHARA_W)
-    map.Flag(label="DOAB_IJ_N", value=DOAB_IJ_N)
-    map.Flag(label="DOAB_IJ_S", value=DOAB_IJ_S)
-    map.Flag(label="DOAB_JC", value=DOAB_JC)
-    map.Flag(label="DOAB_CR", value=DOAB_CR)
-    map.Flag(label="DOAB_RS_N", value=DOAB_RS_N)
-    map.Flag(label="DOAB_RS_C", value=DOAB_RS_C)
-    map.Flag(label="DOAB_RS_S", value=DOAB_RS_S)
+    # map.Flag(label="POJK", value=POJK)
+    map.Flag(label="KASHMIR", value= KASHMIR)
+    map.Flag(label="JAMMU", value= JAMMU)
+    map.Flag(label="VARNU", value=VARNU)
+    map.Flag(label="VANAVYA", value=VANAVYA)
+    map.Flag(label="GANDHĀRA", value=GANDHARA)
+    map.Flag(label="KEKAYA", value=DOAB_IJ)
+    map.Flag(
+        label="SINDHU (PJ)",
+        value=PAK_THALL,
+        note=""""Sindhu as a janapada may be identified with Sind-Sāgar Doāb,
+ the region between the Jhelum and the Indus. Most of it is now the sandy desert
+ of Thal." (VS Agarwala Ch II, Sec 4.)""",
+    )
+    map.Flag(label="MADRA", value=MADRA)
+    map.Flag(
+        label="UŚĪNARA",
+        value=USINARA,
+        note="Equivalent to Śibi/Śivi. Agalasseis of Greek accounts also dwelled somewhere here.",
+    )
+    map.Flag(label="MĀLAVA", value=MALAVA)
+    map.Flag(label="KṢUDRAKA", value=KSUDRAKA)
+    map.Flag(label="LAVAPURA?", value=LAVAPURA | DOAB_RS_N - AUDUMBARA, classes="names-unknown")
+    map.Flag(label="SINDHU-SAUVIRA", value=SINDH)
+
+    # map.Flag(label="PSEUDOSATTAGYDIA", value=PSEUDOSATTAGYDIA)
+    # map.Flag(label="SINDH", value=SINDH)
+    # map.Flag(label="GANDHARA_W", value=GANDHARA_W)
+    # map.Flag(label="DOAB_IJ_N", value=DOAB_IJ_N)
+    # map.Flag(label="DOAB_IJ_S", value=DOAB_IJ_S)
+    # map.Flag(label="DOAB_JC", value=DOAB_JC)
+    # map.Flag(label="DOAB_CR", value=DOAB_CR)
+    # map.Flag(label="DOAB_RS_N", value=DOAB_RS_N)
+    # map.Flag(label="DOAB_RS_C", value=DOAB_RS_C)
+    # map.Flag(label="DOAB_RS_S", value=DOAB_RS_S)
+    map.Flag(label="UḌḌIYĀNA", value=UDDIYANA)
+    map.Flag(label="APRĪTA", value=APRITA, note="or Trīrāvatīka, modern Tirāh.")
+    map.Flag(label="KĀPIŚĀYANA", value=KAPISAYANA)
+    map.Flag(label="TRYAKŚYĀYAṆA", value=TRYAKSYAYANA, note = "or Dvīrāvatika, modern Dir; or Madhumant, modern Mohmand.")
+    map.Flag(
+        label="AŚVAKĀYANA",
+        value=ASVAKAYANA,
+        note="The Hastināyanas may have have been cognate with the Aśvakāyanas, or ruled the region around Puṣkalāvatī.",
+    )
+    map.Flag(label="AŚVĀYANA", value=ASVAYANA)
+    map.Flag(label="NIGRAHĀRA", value=NIGRAHARA)
+    map.Flag(label="URAŚĀ", value=URASA, note="Hazara")
+    map.Flag(
+        label="ŚAVASA",
+        value=SAVASA,
+        note="""Of these Kekaya and Savasa may be
+ located between the Jhelum and the Chenab, the first in the
+ south and the second in the north respectively, and Madra and
+ Uśīnara between the Chenab and the Ravi in the north and
+ south respectively. The divisions become clear on the map.
+ The Divyāvadāna refers to the Śvasas in Uttarāpatha with
+ headquarters at Takṣaśilā to which Aśoka was deputed by his
+ father Bindusāra as Viceroy to quell their rebellion. The name
+ Śavasa or Śvasa seems to be preserved in the modern name 
+ Chhibha comprising Punch, Rajauri and Bhimbhara. - VS Agarwala Ch II, Sec 4.""",
+    )
+    map.Flag(label="SATTAGYDIA?", value=PSEUDOSATTAGYDIA_S, classes="names-unknown")
+
     map.Flag(label="TRIGARTA", value=TRIGARTA)
     map.Flag(label="KUNINDA", value=KUNINDA)
+    map.Flag(label="BHĀRADVAJA", value=gadm("IND.35.6"))
+    map.Flag(label="AUDUMBARA", value=AUDUMBARA)
+    map.Flag(label="TILAKHALA", value=TILAKHALA)
+    map.Flag(label="RĀJANYA", value=RAJANYA)
     map.Flag(label="KUTCH", value=KUTCH)
     map.Flag(label="SURASTRA", value=SURASTRA)
     map.Flag(label="ANARTA", value=ANARTA)
