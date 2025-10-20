@@ -12,6 +12,7 @@ import maps.base_options
 
 def add_flags(map: xatra.Map):
     map.Admin(gadm="IND", level=2, color_by_level=1)
+    map.Admin(gadm="Z06.1", level=3, color_by_level=1)  # special handling for Pakistani-occupied Jammu & Kashmir
     map.Admin(gadm="PAK", level=3, color_by_level=1) # level-3 GADM divisions in Pak are more like districts
     map.Admin(gadm="BGD", level=2, color_by_level=1)
     map.Admin(gadm="AFG", level=2, color_by_level=1)

@@ -11,6 +11,7 @@ import maps.rivers.rivers_gangetic as rivers_gangetic
 import maps.rivers.rivers_peninsular as rivers_peninsular
 import maps.rivers.rivers_saptasindhu as rivers_saptasindhu
 import maps.base_options
+
 def add_flags(map: xatra.Map):
     map.Flag(label="KASHMIR", value=KASHMIR)
     map.Flag(label="JAMMU", value=JAMMU)

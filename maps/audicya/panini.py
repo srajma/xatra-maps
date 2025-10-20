@@ -10,7 +10,7 @@ import maps.rivers.rivers_saptasindhu
 import maps.rivers.rivers_silkrd
 import maps.base_options
 
-MOUNTAIN_ICON = Icon.geometric("triangle")
+MOUNTAIN_ICON = Icon.geometric("triangle", color="#964B00", size=15)
 
 
 def add_flags(map: xatra.Map):
@@ -53,6 +53,15 @@ def add_flags(map: xatra.Map):
  Śavasa or Śvasa seems to be preserved in the modern name 
  Chhibha comprising Punch, Rajauri and Bhimbhara. - VS Agarwala Ch II, Sec 4.""",
     )
+    map.Flag(label="GLAUCUKAYĀNAKA", value=GLAUCUKAYANAKA, note ="""
+The free clan called the Glaukanikoi (identical with the Glaucukāyanakas of the
+ Kaśikā on Panini IV.3.99) whose country lay in the fertile and populous regions
+ lying in the south of Kaśmīr (the Bhimber and Rajauri districts) between the upper courses of
+ the Jhelum and the Chenab and the Ravi, had as many as thirty-seven cities, the smallest
+ of which contained not fewer than 5,000 inhabitants, while many contained upwards of
+ 10,000. - VS Agarwala Ch II, Sec 5 p 73. The Abisares of Greek record was also located here
+ at the same location, which is a bit odd.
+""")
     map.Flag(label="KAŚMĪRA", value=KASHMIR)
     map.Flag(label="GANDHĀRA", value=GANDHARA)
     map.Flag(label="VṚJISTHĀNA", value=VRJISTHANA, note="Vijayendra Kumar Mathur (1969), Aitihasik Sthanavali p 870: वृजिस्थान नामक एक ऐतिहासिक स्थान का उल्लेख प्रसिद्ध चीनी यात्री युवानच्वांग ने 'फो-लि शतंगना' नाम से किया है। सम्भवत: यह वर्तमान वज़ीरस्तान (पाकिस्तान) है।")
