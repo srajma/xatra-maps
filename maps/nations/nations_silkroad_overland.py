@@ -53,5 +53,5 @@ if __name__ == "__main__":
     Roughly valid in the period 800 BC to 1200, think of it as a 
     first-order approximation or a reference guide. 
     """)
-    map.show(out_json="docs/nations_silkroad_overland.json", out_html="docs/nations_silkroad_overland.html")
+    map.show(out_json="../maps/nations_silkroad_overland.json", out_html="../maps/nations_silkroad_overland.html")
 

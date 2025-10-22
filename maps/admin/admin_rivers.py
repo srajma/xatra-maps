@@ -11,4 +11,4 @@ if __name__ == "__main__":
     add_flags(m)
     m.TitleBox("""Rivers.""")
 
-    m.show(out_json="docs/admin_rivers.json", out_html="docs/admin_rivers.html")
+    m.show(out_json="../maps/admin_rivers.json", out_html="../maps/admin_rivers.html")

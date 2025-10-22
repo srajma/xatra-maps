@@ -10,8 +10,8 @@ wheels/
 .venv
 
 # temp
-# docs/*.html
-docs/*.json
+# ../maps/*.html
+# ../maps/*.json
 
 # big data file
 DOSE_V2.9.csv

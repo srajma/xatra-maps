@@ -242,4 +242,4 @@ if __name__ == "__main__":
     """)
     map.zoom(4)
     map.focus(30.0,78.0)
-    map.show(out_json="docs/sea.json", out_html="docs/sea.html")
+    map.show(out_json="../maps/sea.json", out_html="../maps/sea.html")

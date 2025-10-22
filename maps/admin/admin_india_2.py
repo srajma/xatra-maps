@@ -47,5 +47,5 @@ if __name__ == "__main__":
         stroke-width: 5;
     }
     """)
-    map.show(out_json="docs/admin_india_2.json", out_html="docs/admin_india_2.html")
+    map.show(out_json="../maps/admin_india_2.json", out_html="../maps/admin_india_2.html")
 

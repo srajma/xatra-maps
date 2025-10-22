@@ -116,4 +116,4 @@ if __name__ == "__main__":
     {PORT_ICON.to_html()} <span style="color:black">Cities and ports mentioned in Indian literature</span><br>
     {CITY_ICON.to_html()} <span style="color:blue">Capitals of Indian(-ized) states known from local or Chinese history</span><br><br>
     """)
-    map.show(out_json="docs/suvarnabhumi.json", out_html="docs/suvarnabhumi.html")
+    map.show(out_json="../maps/suvarnabhumi.json", out_html="../maps/suvarnabhumi.html")

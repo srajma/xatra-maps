@@ -287,4 +287,4 @@ if __name__ == "__main__":
     map.TitleBox("""
     Map of the Audicya (northern) country c. 4th century BC according to Pāṇiṇi (SS: VS Agarwala)
     """)
-    map.show(out_json="docs/nw_panini.json", out_html="docs/nw_panini.html")
+    map.show(out_json="../maps/nw_panini.json", out_html="../maps/nw_panini.html")

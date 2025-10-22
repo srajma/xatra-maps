@@ -369,4 +369,4 @@ if __name__ == "__main__":
         <p>Thick lines are the bare minimum. Dashed lines are still very desirable.</p>
         <p><b>Hover over each line</b> to see its name and purpose.</p>
     """)
-    map.show(out_json="docs/hsr.json", out_html="docs/hsr.html")
+    map.show(out_json="../maps/hsr.json", out_html="../maps/hsr.html")

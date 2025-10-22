@@ -177,5 +177,5 @@ if __name__ == "__main__":
     in that time are unknown to me.
     <br>
     """)
-    map.show(out_json="docs/nations_india.json", out_html="docs/nations_india.html")
+    map.show(out_json="../maps/nations_india.json", out_html="../maps/nations_india.html")
 

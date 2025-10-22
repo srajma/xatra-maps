@@ -246,8 +246,8 @@ def main():
     # Export the map
     print("Exporting map...")
     map_obj.show(
-        out_json="docs/subcontinent_gdp_pc.json",
-        out_html="docs/subcontinent_gdp_pc.html",
+        out_json="../maps/subcontinent_gdp_pc.json",
+        out_html="../maps/subcontinent_gdp_pc.html",
     )
 
     print("Visualization complete!")

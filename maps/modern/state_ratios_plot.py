@@ -125,7 +125,7 @@ def create_ratios_plot(df):
     plt.tight_layout()
     
     # Save the plot
-    output_file = "docs/state_gdp_ratios.png"
+    output_file = "../maps/state_gdp_ratios.png"
     plt.savefig(output_file, dpi=300, bbox_inches='tight')
     print(f"\nPlot saved as: {output_file}")
     
