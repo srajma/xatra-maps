@@ -15,17 +15,47 @@ MOUNTAIN_ICON = Icon.geometric("triangle", color="#964B00", size=15)
 
 def add_flags(map: xatra.Map):
     map.Flag(label="PRAKAṆVA", value=FERGHANA)
+    map.Flag(label="VṚKA", value=HYRCANIA)
+    map.Flag(label="PĀRTHAVA", value=PARTHIA)
+    map.Flag(label="PĀRŚAVA", value=PERSIA, note="V.S. Agarwala Ch VII, Sec 8 p 446.")
+    map.Flag(label="DĀMANI", value=DAMANI, note="V.S. Agarwala Ch VII, Sec 8 p 444.")
+    map.Flag(label="HĀRAHŪRAKA", value=KANDAHAR, note="""
+Its own native place is the commentary on such of its various forms iis Kāpīśāyana
+ and Hārahūraka: (Arth. Trans. p. 145; Text. II.25). Obviously there were two varieties
+ of the grape wine, the Kāpīśāyana produced in the region round Kāpīśī in north
+ Afghanistan, and Hārahūraka in the south in the valley of
+ the Harahvaiti or Arghandab.* The black raisins are still
+ called harahūra, and it is possible that the Kāpīśāyana or
+ northern variety of wine was made from green and the
+ Hārahūraka or Kandhar wine from black grapes.
+ - V.S. Agarwala Ch III Sec 6 p 117.
+""")
+    map.Flag(label="SĀRAVA", value=HERAT, note="""
+It may be noted that Sarayu was also the name of a river in remote Rigvedic India
+ flowing past Herat (derived from Hari-Rud; cf. Old-Persian
+ Harayu from Vedic Sarayu). Darius I (516 B.C.) in his inscription mentions Haraiva,
+ the people of Harayū, equal to Pāṇini’s Sārava. In the Elamite version of the Behistun
+ inscription occurs the name Arriya (=Haraiva=Gk. Aria with its capital at Herat).
+""")
     map.Flag(label="BĀLHĪKA", value=BACTRIA)
+    map.Flag(label="ANDHAKAVARTA", value=ANDHAKAVARTA, note="V.S. Agarwala Ch VII Sec 7 p 435.")
+    map.Flag(label="ROHITAGIRI", value=ROHITAGIRI)
+    map.Flag(label="PAKTHA", value=PAKTHA)
     map.Flag(label="DVYAKṢĀYAṆA", value=AFG_MERU)
     map.Flag(label="UḌḌIYĀNA", value=UDDIYANA)
-    map.Flag(label="APRĪTA", value=APRITA, note="or Trīrāvatīka, modern Tirāh.")
+    map.Flag(label="APRĪTA", value=APRITA, note="or Trīrāvatīka, modern Tirāh. Modern Afridis.")
     map.Flag(label="KĀPIŚĀYANA", value=KAPISAYANA)
     map.Flag(label="TRYAKŚYĀYAṆA", value=TRYAKSYAYANA, note = "or Dvīrāvatika, modern Dir; or Madhumant, modern Mohmand.")
+    map.Flag(label="KAMBOJA", value=KAMBOJA, note="Kamboja is usually associated with Kabul, but Pāṇini has associated it with the Meru (Pamir) mountains.")
     map.Flag(
         label="AŚVAKĀYANA",
         value=ASVAKAYANA,
-        note="The Hastināyanas may have have been cognate with the Aśvakāyanas, or ruled the region around Puṣkalāvatī.",
+        note="The Hastināyanas ruled the region around Puṣkalāvatī.",
     )
+    map.Flag(label="MĀLĀVAT", value=gadm("PAK.5.6.3"), note="""VS Agarwala Ch II Sec 3 p 41: Patāñjali gives several new names of mountain-dwellers, of
+ which Mālāvat (II.287) is noteworthy as corresponding to 
+ Mallkand, the mountainous district north of Dargai, the home 
+ of the Dargalas in the country south of the Swat river. """)
     map.Flag(label="AŚVĀYANA", value=ASVAYANA)
     map.Flag(label="NIGRAHĀRA", value=NIGRAHARA)
     map.Flag(
@@ -34,7 +64,7 @@ def add_flags(map: xatra.Map):
         note="Inhabited by Dardic peoples such as the Piśācas.",
     )
     map.Flag(
-        label="KAMBOJA",
+        label="KAMBOJA?",
         value=TJK_MERU,
         note="Kamboja is usually associated with Kabul, but Pāṇini has associated it with the Meru (Pamir) mountains.",
     )
@@ -63,7 +93,7 @@ The free clan called the Glaukanikoi (identical with the Glaucukāyanakas of the
  at the same location, which is a bit odd.
 """)
     map.Flag(label="KAŚMĪRA", value=KASHMIR)
-    map.Flag(label="GANDHĀRA", value=GANDHARA)
+    map.Flag(label="GANDHĀRA", value=GANDHARA, note="perhaps the Hastināyanas, i.e. an elephant-expedition force, ruled here.")
     map.Flag(label="VṚJISTHĀNA", value=VRJISTHANA, note="Vijayendra Kumar Mathur (1969), Aitihasik Sthanavali p 870: वृजिस्थान नामक एक ऐतिहासिक स्थान का उल्लेख प्रसिद्ध चीनी यात्री युवानच्वांग ने 'फो-लि शतंगना' नाम से किया है। सम्भवत: यह वर्तमान वज़ीरस्तान (पाकिस्तान) है।")
     map.Flag(label="VANAVYA", value=VANAVYA)
     map.Flag(label="VARNU", value=VARNU)
@@ -96,6 +126,7 @@ The free clan called the Glaukanikoi (identical with the Glaucukāyanakas of the
     )
     map.Flag(label="KUṆINDA", value=KUNINDA, note="or Kulinda, or Kālakūṭa")
     map.Flag(label="BHĀRADVAJA", value=gadm("IND.35.6"))
+    map.Flag(label="RAṄKU", value=gadm("IND.35.1"))
     map.Flag(label="AUDUMBARA", value=AUDUMBARA)
     map.Flag(label="TILAKHALA", value=TILAKHALA)
     map.Flag(label="RĀJANYA", value=RAJANYA)
@@ -131,7 +162,7 @@ V.S. Agarwala Ch IV, Sec 3: A confederacy of tribes including Ajamīḍha, Ajakr
     map.Flag(label="BRĀHMAṆAKA", value=BRAHMANAKA)
     map.Flag(label="INDRAVAKTRA", value=INDRAVAKTRA, note="V.S. Agarwala Ch 2, Sec 5 p 65-66. Inhabited by Kitavāḥ, Pāradāḥ, Vairāmāḥ peoples.")
     map.Flag(label="SINDHUVAKTRA", value=SINDHUVAKTRA, note="V.S. Agarwala Ch 2, Sec 5 p 65-66.")
-    map.Flag(label="PARDĀYANA", value=PARDAYANA, note="V.S. Agarwala Ch 2, Sec 5 p 65-66.")
+    map.Flag(label="PĀRDĀYANA", value=PARDAYANA, note="V.S. Agarwala Ch 2, Sec 5 p 65-66. Vārteyas also dwelled here (V.S. Agarwala Ch VII Sec 8 p 450).")
     map.Flag(label="ĀRABHAṬA", value=ARABHATA, note="V.S. Agarwala Ch 2, Sec 5 p 65-66.")
     map.Flag(label="AGNI", value=KUTCH, note="Kaccha. Vibhujāgni = Great Rann of Kutch; Kāṇḍāgni = Little Rann of Kutch. V.S. Agarwala Ch 2, Sec 5 p 65-66.")
     map.Flag(label="SURĀṢṬRA", value=SURASTRA, note="Dāru-kaccha.")
@@ -162,6 +193,8 @@ V.S. Agarwala Ch IV, Sec 3: A confederacy of tribes including Ajamīḍha, Ajakr
     map.Point(label="Campa", position=[32.5473465, 76.1106229])
     map.Point(label="Gabḍikā", position=[32.4428475, 76.513443])
     map.Point(label="Kuluṭa", position=[31.9545839, 77.0906928])
+    map.Point(label="Udbhāṇḍa", position=[33.8968548,72.2461023], note="""On this route lay the town called Udbhāṇḍa (Ohind) as the
+ destination where the merchandise was unloaded for transhipment across the Indus. - V.S. Agarwala Ch IV, Sec 6 p 245.""")
     map.Point(label="Maṇḍāmatī", position=[31.7094582, 76.9201538])
     map.Point(label="Phalakapura", position=[31.0143239, 75.7758086])
     map.Point(label="Sunetra", position=[30.8840679,75.7991748])
@@ -175,10 +208,31 @@ V.S. Agarwala Ch IV, Sec 3: A confederacy of tribes including Ajamīḍha, Ajakr
     map.Point(label="Hṛḍgolīya", position=[34.3521939,70.4856822])
     map.Point(label="Andhakavarta", position=[36.95098,65.0863755])
     map.Point(label="Naḍvala", position=[25.3762851,73.4335213])
+    map.Point(label="Aśani", position=[34.0821216,70.6623351], note="""
+e.g, Asani (Parśvādi group, V.3.117) perhaps, Shinwāris with their parent-stock of the Kārshbuns, to be identified 
+ with Kārśāpaṇas in the same gaṇa. - V.S. Agarwala CH VII Sec 7 p 438.
+""")
+    map.Point(label="Bālhīka", position=[36.7571227,66.8740582])
     map.Point(label="Rohitagiri", position=[33.9434, 66.2476], icon=MOUNTAIN_ICON, note="Roha is an old name for Afghanistan. See V.S. Agarwala Ch VII, Sec 7, p 435.")
     map.Point(label="Añjanāgiri", position=[30.4999991,70.156367], icon=MOUNTAIN_ICON, note="or Trikakut, or Suleiman mountains. See V.S. Agarwala Ch II, Sec 3 p 39.")
     map.Point(label="Salt Range", position=[32.3289,72.2186], icon=MOUNTAIN_ICON)
     map.Point(label="Kiṃśulkāgiri", position=[27.8099,64.4678], icon=MOUNTAIN_ICON, note = "Or Hiṅgulā in Prakrit.")
+    map.Point(label="Vidura", position=[17.9085337,77.4533476], icon=MOUNTAIN_ICON, note="""VS Agarwala Ch II, Sec 3 p 39:
+ Pāṇini mentions some particular hills: (1) Tri-kakut 
+ (V.4.147) so-called from its three peaks, a name first used in
+ the Atharvaveda as the source of a salve (añjana), which may
+ he identified with the Sulaiman mountain, famous as the source
+ of antimony all over the Punjab and Sind (probably same as
+ Sauvirāñjana; cf. Vedic Index I.329; (2) Vidura (IV.3.84)
+ as the source of the precious stone called vaidūrya cat’s eye,
+ which according to Patanjali was quarried at Vālavaya and
+ treated by the lapidaries in Vidura, probably Bidar (cf. Pargiter,
+ Mārk. p. 365, for Vaidurya as Satpura); (3) Kiṃśulakā-giri
+ (VI.3.117), to which the Gaṇapāṭha adds five more names, viz.,
+ Śālvakāgiri, Añjanāgiri, Bhañjanāgiri, Lohitāgiri, Kukkuṭāgiri, 
+
+These six names seem to be taken from some Bhuvankosha list, giving in order the ranges on the western frontiers from Afghanistan to Baluchistan.
+ """)
     map.Point(label="Śālvakāgiri", position=[25.9999992,66.1397003], icon=MOUNTAIN_ICON, note = "See V.S. Agarwala Ch II, Sec 3 p 39-40.")
     map.Point(label="Bhañjanāgiri", position=[34.6336391,67.8086473], icon=MOUNTAIN_ICON, note="See V.S. Agarwala Ch II, Sec 3 p 39-40. Koh-i-Baba.")
     map.Point(label="Kukkuṭagiri", position=[34.0345,64.7754], icon=MOUNTAIN_ICON, note="See V.S. Agarwala Ch II, Sec 3 p 39-40.")

@@ -18,4 +18,4 @@ where = ["."]
 include = ["maps*"]
 
 [tool.uv.sources]
-xatra = { path = "../xatra2", editable = true }
+xatra = { path = "../../xatra2", editable = true }
