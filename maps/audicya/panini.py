@@ -217,14 +217,14 @@ e.g, Asani (Parśvādi group, V.3.117) perhaps, Shinwāris with their parent-sto
     map.Point(label="Añjanāgiri", position=[30.4999991,70.156367], icon=MOUNTAIN_ICON, note="or Trikakut, or Suleiman mountains. See V.S. Agarwala Ch II, Sec 3 p 39.")
     map.Point(label="Salt Range", position=[32.3289,72.2186], icon=MOUNTAIN_ICON)
     map.Point(label="Kiṃśulkāgiri", position=[27.8099,64.4678], icon=MOUNTAIN_ICON, note = "Or Hiṅgulā in Prakrit.")
-    map.Point(label="Vidura", position=[17.9085337,77.4533476], icon=MOUNTAIN_ICON, note="""VS Agarwala Ch II, Sec 3 p 39:
+    map.Point(label="Vidura", position=[32.4032679,74.7789954], icon=MOUNTAIN_ICON, note="""VS Agarwala Ch II, Sec 3 p 39:
  Pāṇini mentions some particular hills: (1) Tri-kakut 
  (V.4.147) so-called from its three peaks, a name first used in
  the Atharvaveda as the source of a salve (añjana), which may
  he identified with the Sulaiman mountain, famous as the source
  of antimony all over the Punjab and Sind (probably same as
  Sauvirāñjana; cf. Vedic Index I.329; (2) Vidura (IV.3.84)
- as the source of the precious stone called vaidūrya cat’s eye,
+ as the source of the precious stone called vaidūrya (cat’s eye/lapis lazuli),
  which according to Patanjali was quarried at Vālavaya and
  treated by the lapidaries in Vidura, probably Bidar (cf. Pargiter,
  Mārk. p. 365, for Vaidurya as Satpura); (3) Kiṃśulakā-giri
