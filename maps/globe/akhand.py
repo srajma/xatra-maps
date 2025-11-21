@@ -15,16 +15,17 @@ BRIEF_COLONIES = (
     | KANDAHAR
     | ZARANJ
     | AFG_MISC
-    | KAMBOJA
+    # | KAMBOJA
+    # | YANA
     | BACTRIA
-    | MARGIANA
-    | SOGDIA
+    # | MARGIANA
+    # | SOGDIA
     | MERU
     | MONGOLIA
     | MITANNI
     | ARMENIA
 )
-FUNDAMENTAL_HB = TIBET | JAPAN | KOREA
+FUNDAMENTAL_HB = TIBET | JAPAN | KOREA | SOGDIA | MARGIANA
 DEEP_INFLUENCE = CHINA_PROPER | MANCHURIA | BUDDHIST_RUSSIA | NORTH_VIETNAM
 EXPLORED = (MEDITERRANEAN_EAST | AFRICA_EAST_SPOTTY | GULF | LEVANT | IRANIC) - (
     DEEP_INFLUENCE
@@ -32,6 +33,9 @@ EXPLORED = (MEDITERRANEAN_EAST | AFRICA_EAST_SPOTTY | GULF | LEVANT | IRANIC) - 
     | BRIEF_COLONIES
     | FUNDAMENTAL_COLONIES
     | SUBCONTINENT_PROPER
+    | DARADA
+    | KAMBOJA
+    | YANA
 )
 
 if __name__ == "__main__":
@@ -43,7 +47,9 @@ if __name__ == "__main__":
         value=FUNDAMENTAL_COLONIES,
         classes="fundamental-colonies",
     )
-    map.Flag(label="HIMALAYAS", value=YYY_HIMALAYAN, classes="himalayas")
+    map.Flag(label="DARADA", value=DARADA, classes="borderline")
+    map.Flag(label="KAMBOJA", value = GREATER_KAMBOJA, classes="borderline")
+    map.Flag(label="HIMALAYAS", value=YYY_HIMALAYAN - BRIEF_COLONIES - DARADA - GREATER_KAMBOJA - TIBET, classes="borderline")
     map.Flag(label="BRIEF COLONIES", value=BRIEF_COLONIES, classes="brief-colonies")
     map.Flag(
         label="FUNDAMENTALLY HINDU/BUDDHIST",
@@ -58,13 +64,13 @@ if __name__ == "__main__":
     maps.rivers.rivers_saptasindhu.add_flags(map)
     maps.rivers.rivers_silkrd.add_flags(map)
     map.TitleBox("""
-Greater Indian Sphere.<br>
+Indian interactions with the world.<br>
 <b>Indian core</b>: India proper<br>
-<b>Fundamental colonies</b>: Countries whose civilizations were fundamentally an Indian endeavour.<br>
-<b>Brief colonies:</b> Countries that were ruled by an Indian for a brief period of time.<br>
+<b>Fundamentally Indian</b>: Countries whose civilizations were fundamentally an Indian endeavour.<br>
+<b>Brief occupation:</b> Countries that were ruled by an Indian for a brief period of time.<br>
 <b>Fundamentally Hindu/Buddhist:</b> Countries whose civilizations were fundamentally Hindu/Buddhist, but no direct Indian rule.<br>
 <b>Deep Influence:</b> Countries that were significantly influenced by Indiian religion and philosophy.<br>
-<b>Raided:</b> Brief raids by Chachas and Pratiharas.<br>
+<b>Raided:</b> Brief raids in the 7th (by Chalukyas? Or Chach of Sindh?) and 9th centuries (by the Pratiharas).<br>
 <b>Explored:</b> Countries that were visited by Indians in antiquity.<br>
 """)
     map.CSS(r"""
@@ -75,6 +81,6 @@ Greater Indian Sphere.<br>
     .deep-influence {fill: #a425d6; color: #a425d6 !important;}
     .raided {fill: #936a27; color: #936a27 !important;}
     .explored {fill: #698db3; color: #698db3 !important;}
-    .himalayas {fill: #ff0000; color: #ff0000 !important;}
+    .borderline {fill: #ff0000; color: #ff0000 !important;}
     """)
     map.show(out_json="../maps/akhand.json", out_html="../maps/akhand.html")
