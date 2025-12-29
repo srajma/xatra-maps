@@ -99,6 +99,18 @@ def add_flags(map: xatra.Map):
         note=REF_MOTI_CHANDRA.format("p. 61"),
     ),
     map.Text(
+        label="Ratnākara Sea",
+        position=[14.0, 63.5449],
+        classes="general-label-other general-label-other-ocean general-label-other-ratnakara",
+        note=REF_MOTI_CHANDRA.format("p. 44"),
+    ),
+    map.Text(
+        label="Mahodadhi Sea",
+        position=[14.0, 89.2090],
+        classes="general-label-other general-label-other-ocean general-label-other-mahodadhi",
+        note=REF_MOTI_CHANDRA.format("p. 44"),
+    ),
+    map.Text(
         label="Dadhimāla Sea",
         position=[20.083571, 38.700488],
         classes="general-label-other general-label-other-dadhimala",
@@ -188,6 +200,9 @@ def add_flags(map: xatra.Map):
         .port-label-other {color: black; line-height: 1;}
         .city-label-other {color: blue; line-height: 1;}
         
+        general-label-other-ocean {
+            font-size: 20px;
+        }
         .general-label-other-parasika {
             transform: rotate(45deg) !important;
         }
