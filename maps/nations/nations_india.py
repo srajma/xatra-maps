@@ -13,15 +13,45 @@ import maps.rivers.rivers_saptasindhu as rivers_saptasindhu
 import maps.base_options
 
 def add_flags(map: xatra.Map):
+    map.Flag(label="VṚJISTHĀNA", value=VRJISTHANA, note="Vijayendra Kumar Mathur (1969), Aitihasik Sthanavali p 870: वृजिस्थान नामक एक ऐतिहासिक स्थान का उल्लेख प्रसिद्ध चीनी यात्री युवानच्वांग ने 'फो-लि शतंगना' नाम से किया है। सम्भवत: यह वर्तमान वज़ीरस्तान (पाकिस्तान) है।")
+    map.Flag(label="VARNU", value=VARNU)
+    map.Flag(label="VANAVYA", value=VANAVYA)    
+    map.Flag(label="APRĪTA", value=APRITA, note="or Trīrāvatīka, modern Tirāh.")
+    map.Flag(label="SATTAGYDIA?", value=PSEUDOSATTAGYDIA_S, classes="names-unknown")
+    map.Flag(label="KAMBOJA", value=KAMBOJA)
+    map.Flag(label="KĀPIŚĀYANA", value=KAPISAYANA)
+    map.Flag(label="TRYAKŚYĀYAṆA", value=TRYAKSYAYANA, note = "or Dvīrāvatika, modern Dir; or Madhumant, modern Mohmand.")
+    map.Flag(
+        label="AŚVAKĀYANA",
+        value=ASVAKAYANA,
+        note="The Hastināyanas may have have been cognate with the Aśvakāyanas, or ruled the region around Puṣkalāvatī.",
+    )
+    map.Flag(label="AŚVĀYANA", value=ASVAYANA)
+    map.Flag(label="NIGRAHĀRA", value=NIGRAHARA)
+    map.Flag(label="URAŚĀ", value=URASA, note="Hazara")
+    map.Flag(
+        label="ŚAVASA",
+        value=SAVASA,
+        note="""Of these Kekaya and Savasa may be
+ located between the Jhelum and the Chenab, the first in the
+ south and the second in the north respectively, and Madra and
+ Uśīnara between the Chenab and the Ravi in the north and
+ south respectively. The divisions become clear on the map.
+ The Divyāvadāna refers to the Śvasas in Uttarāpatha with
+ headquarters at Takṣaśilā to which Aśoka was deputed by his
+ father Bindusāra as Viceroy to quell their rebellion. The name
+ Śavasa or Śvasa seems to be preserved in the modern name 
+ Chhibha comprising Punch, Rajauri and Bhimbhara. - VS Agarwala Ch II, Sec 4.""",
+    )
+    map.Flag(label="UḌḌIYĀNA", value=UDDIYANA)
+    map.Flag(label="DARADA", value=DARADA)
+
+
     map.Flag(label="KASHMIR", value=KASHMIR)
     map.Flag(label="JAMMU", value=JAMMU)
     # map.Flag(label="POJK", value=POJK)
     map.Flag(label="KASHMIR", value= KASHMIR)
     map.Flag(label="JAMMU", value= JAMMU)
-    map.Flag(label="VARNU", value=VARNU)
-    map.Flag(label="VANAVYA", value=VANAVYA)
-    map.Flag(label="VṚJISTHĀNA", value=VRJISTHANA, note="Vijayendra Kumar Mathur (1969), Aitihasik Sthanavali p 870: वृजिस्थान नामक एक ऐतिहासिक स्थान का उल्लेख प्रसिद्ध चीनी यात्री युवानच्वांग ने 'फो-लि शतंगना' नाम से किया है। सम्भवत: यह वर्तमान वज़ीरस्तान (पाकिस्तान) है।")
-    map.Flag(label="KAMBOJA", value=KAMBOJA)
     map.Flag(label="GANDHĀRA", value=GANDHARA)
     map.Flag(label="KEKAYA", value=DOAB_IJ)
     map.Flag(
@@ -52,38 +82,13 @@ def add_flags(map: xatra.Map):
     # map.Flag(label="DOAB_RS_N", value=DOAB_RS_N)
     # map.Flag(label="DOAB_RS_C", value=DOAB_RS_C)
     # map.Flag(label="DOAB_RS_S", value=DOAB_RS_S)
-    map.Flag(label="UḌḌIYĀNA", value=UDDIYANA)
-    map.Flag(label="APRĪTA", value=APRITA, note="or Trīrāvatīka, modern Tirāh.")
-    map.Flag(label="KĀPIŚĀYANA", value=KAPISAYANA)
-    map.Flag(label="TRYAKŚYĀYAṆA", value=TRYAKSYAYANA, note = "or Dvīrāvatika, modern Dir; or Madhumant, modern Mohmand.")
-    map.Flag(
-        label="AŚVAKĀYANA",
-        value=ASVAKAYANA,
-        note="The Hastināyanas may have have been cognate with the Aśvakāyanas, or ruled the region around Puṣkalāvatī.",
-    )
-    map.Flag(label="AŚVĀYANA", value=ASVAYANA)
-    map.Flag(label="NIGRAHĀRA", value=NIGRAHARA)
-    map.Flag(label="URAŚĀ", value=URASA, note="Hazara")
-    map.Flag(
-        label="ŚAVASA",
-        value=SAVASA,
-        note="""Of these Kekaya and Savasa may be
- located between the Jhelum and the Chenab, the first in the
- south and the second in the north respectively, and Madra and
- Uśīnara between the Chenab and the Ravi in the north and
- south respectively. The divisions become clear on the map.
- The Divyāvadāna refers to the Śvasas in Uttarāpatha with
- headquarters at Takṣaśilā to which Aśoka was deputed by his
- father Bindusāra as Viceroy to quell their rebellion. The name
- Śavasa or Śvasa seems to be preserved in the modern name 
- Chhibha comprising Punch, Rajauri and Bhimbhara. - VS Agarwala Ch II, Sec 4.""",
-    )
-    map.Flag(label="SATTAGYDIA?", value=PSEUDOSATTAGYDIA_S, classes="names-unknown")
 
     map.Flag(label="TRIGARTA", value=TRIGARTA)
     map.Flag(label="KUNINDA", value=KUNINDA)
     map.Flag(label="BHĀRADVAJA", value=gadm("IND.35.6"))
     map.Flag(label="AUDUMBARA", value=AUDUMBARA)
+    map.Flag(label="GABDIKA", value=GABDIKA)
+    map.Flag(label="YAKRLOMAN", value=YAKRLOMAN)
     map.Flag(label="TILAKHALA", value=TILAKHALA)
     map.Flag(label="RĀJANYA", value=RAJANYA)
     map.Flag(label="KUTCH", value=KUTCH)

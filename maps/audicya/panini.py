@@ -128,6 +128,7 @@ The free clan called the Glaukanikoi (identical with the Glaucukāyanakas of the
     map.Flag(label="BHĀRADVAJA", value=gadm("IND.35.6"))
     map.Flag(label="RAṄKU", value=gadm("IND.35.1"))
     map.Flag(label="AUDUMBARA", value=AUDUMBARA)
+    map.Flag(label="GABDIKA", value=GABDIKA)
     map.Flag(label="TILAKHALA", value=TILAKHALA)
     map.Flag(label="RĀJANYA", value=RAJANYA)
     map.Flag(label="KURUKṢETRA", value=KURU_KSETRA_GREATER)
@@ -192,6 +193,7 @@ V.S. Agarwala Ch IV, Sec 3: A confederacy of tribes including Ajamīḍha, Ajakr
     map.Point(label="Pāṭanaprastha", position=[32.2703182, 75.6312559])
     map.Point(label="Campa", position=[32.5473465, 76.1106229])
     map.Point(label="Gabḍikā", position=[32.4428475, 76.513443])
+    map.Point(label="Paṭaccara", position=[28.3247889,76.77218], note="VS Agarwala Ch II, Sec 4 p 62")
     map.Point(label="Kuluṭa", position=[31.9545839, 77.0906928])
     map.Point(label="Udbhāṇḍa", position=[33.8968548,72.2461023], note="""On this route lay the town called Udbhāṇḍa (Ohind) as the
  destination where the merchandise was unloaded for transhipment across the Indus. - V.S. Agarwala Ch IV, Sec 6 p 245.""")
@@ -339,6 +341,7 @@ if __name__ == "__main__":
     """)
     map.zoom(6)
     map.TitleBox("""
-    Map of the Audicya (northern) country c. 4th century BC according to Pāṇiṇi (SS: VS Agarwala)
+    Map of the Audicya (northern) country c. 4th century BC according to Pāṇiṇi (SS: VS Agarwala)<br><br>
+    Note: Pāṇini also provides the geography of the rest of India, however that of the North-West is given with greater resolution and detail.
     """)
     map.show(out_json="../maps/nw_panini.json", out_html="../maps/nw_panini.html")

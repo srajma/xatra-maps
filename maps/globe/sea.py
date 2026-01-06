@@ -13,9 +13,11 @@ def add_flags(map: xatra.Map):
     map.Flag(label="AFRICA_EAST_SPOTTY", value=AFRICA_EAST_SPOTTY)
     map.Flag(label="LEVANT", value=LEVANT)
     map.Flag(label="IRANIC", value=IRANIC)
-    map.Flag(label="JAMBUDVĪPA", value=SUBCONTINENT_PROPER - SIMHALA)
+    map.Flag(label="JAMBUDVĪPA", value=JAMBUDVIPA)
     map.Flag(label="SIMHALA", value=SIMHALA)
     map.Flag(label="CHINA", value=CHINA_PROPER | NORTH_VIETNAM)
+    map.Flag(label="UTTARAKURU", value=TARIM)
+    map.Flag(label="BHUTA", value=TIBET)
     sea_suvarnabhumi.add_flags(map)
     map.Point(
         label="Dvīpa Sukhadara",
@@ -91,6 +93,16 @@ def add_flags(map: xatra.Map):
         label="Pārasīka",
         position=[31.244868, 53.597872],
         classes="general-label-other general-label-other-parasika"
+    ),
+    map.Text(
+        label="UTTARAKURU",
+        position=[39.36, 83.41],
+        classes="general-label-other general-label-other-uttarakuru"
+    ),
+    map.Text(
+        label="BHOṬA",
+        position=[32.55, 91.32],
+        classes="general-label-other general-label-other-bhota"
     ),
     map.Text(
         label="Khuramāla Sea/<br>Pārasavāsa Sea",
