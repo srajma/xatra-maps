@@ -358,7 +358,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "scipy", specifier = ">=1.16.2" },
-    { name = "xatra", editable = "../../xatra2" },
+    { name = "xatra", editable = "../../xatra/xatra.master" },
 ]
 
 [[package]]
@@ -928,8 +928,8 @@ wheels = [
 
 [[package]]
 name = "xatra"
-version = "2.10.0"
-source = { editable = "../../xatra2" }
+version = "2.13.0"
+source = { editable = "../../xatra/xatra.master" }
 dependencies = [
     { name = "geojson" },
     { name = "huggingface-hub" },

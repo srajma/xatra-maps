@@ -3,11 +3,7 @@ import xatra
 from xatra.loaders import gadm, naturalearth
 from xatra.territory_library import *
 from xatra.colorseq import LinearColorSequence
-import maps.rivers.rivers_gangetic
-import maps.rivers.rivers_peninsular
-import maps.rivers.rivers_saptasindhu
-import maps.rivers.rivers_silkrd
-import maps.base_options
+
 
 FUNDAMENTAL_COLONIES = SEA | NEI_HIM | TARIM | SOCOTRA
 BRIEF_COLONIES = (
@@ -38,32 +34,42 @@ EXPLORED = (MEDITERRANEAN_EAST | AFRICA_EAST_SPOTTY | GULF | LEVANT | IRANIC) - 
     | YANA
 )
 
+xatra.Flag(label="INDIAN CORE", value=SUBCONTINENT_PROPER, classes="indian-core")
+xatra.Flag(
+    label="FUNDAMENTAL COLONIES",
+    value=FUNDAMENTAL_COLONIES,
+    classes="fundamental-colonies",
+)
+xatra.Flag(label="DARADA", value=DARADA, classes="borderline")
+xatra.Flag(label="KAMBOJA", value = GREATER_KAMBOJA, classes="borderline")
+xatra.Flag(label="HIMALAYAS", value=YYY_HIMALAYAN - BRIEF_COLONIES - DARADA - GREATER_KAMBOJA - TIBET, classes="borderline")
+xatra.Flag(label="BRIEF COLONIES", value=BRIEF_COLONIES, classes="brief-colonies")
+xatra.Flag(
+    label="FUNDAMENTALLY HINDU/BUDDHIST",
+    value=FUNDAMENTAL_HB,
+    classes="fundamentally-hindu-buddhist",
+)
+xatra.Flag(label="DEEP INFLUENCE", value=DEEP_INFLUENCE, classes="deep-influence")
+xatra.Flag(label="RAIDED", value=PRATIHARA_RAIDS, classes="raided")
+xatra.Flag(label="EXPLORED", value=EXPLORED, classes="explored")
+xatra.CSS(r"""
+.indian-core {fill: #740001; color: #740001 !important;}
+.fundamental-colonies {fill: #e80000; color: #e80000 !important;}
+.brief-colonies {fill: #fc4e2b; color: #fc4e2b !important;}
+.fundamentally-hindu-buddhist {fill: #f5820b; color: #f5820b !important;}
+.deep-influence {fill: #a425d6; color: #a425d6 !important;}
+.raided {fill: #936a27; color: #936a27 !important;}
+.explored {fill: #698db3; color: #698db3 !important;}
+.borderline {fill: #ff0000; color: #ff0000 !important;}
+""")
+
 if __name__ == "__main__":
-    map = xatra.Map()
-    maps.base_options.add_flags(map)
-    map.Flag(label="INDIAN CORE", value=SUBCONTINENT_PROPER, classes="indian-core")
-    map.Flag(
-        label="FUNDAMENTAL COLONIES",
-        value=FUNDAMENTAL_COLONIES,
-        classes="fundamental-colonies",
-    )
-    map.Flag(label="DARADA", value=DARADA, classes="borderline")
-    map.Flag(label="KAMBOJA", value = GREATER_KAMBOJA, classes="borderline")
-    map.Flag(label="HIMALAYAS", value=YYY_HIMALAYAN - BRIEF_COLONIES - DARADA - GREATER_KAMBOJA - TIBET, classes="borderline")
-    map.Flag(label="BRIEF COLONIES", value=BRIEF_COLONIES, classes="brief-colonies")
-    map.Flag(
-        label="FUNDAMENTALLY HINDU/BUDDHIST",
-        value=FUNDAMENTAL_HB,
-        classes="fundamentally-hindu-buddhist",
-    )
-    map.Flag(label="DEEP INFLUENCE", value=DEEP_INFLUENCE, classes="deep-influence")
-    map.Flag(label="RAIDED", value=PRATIHARA_RAIDS, classes="raided")
-    map.Flag(label="EXPLORED", value=EXPLORED, classes="explored")
-    maps.rivers.rivers_gangetic.add_flags(map)
-    maps.rivers.rivers_peninsular.add_flags(map)
-    maps.rivers.rivers_saptasindhu.add_flags(map)
-    maps.rivers.rivers_silkrd.add_flags(map)
-    map.TitleBox("""
+    import maps.base_options
+    import maps.rivers.rivers_gangetic
+    import maps.rivers.rivers_peninsular
+    import maps.rivers.rivers_saptasindhu
+    import maps.rivers.rivers_silkrd
+    xatra.TitleBox("""
 Indian interactions with the world.<br>
 <b>Indian core</b>: India proper<br>
 <b>Fundamentally Indian</b>: Countries whose civilizations were fundamentally an Indian endeavour.<br>
@@ -73,14 +79,4 @@ Indian interactions with the world.<br>
 <b>Raided:</b> Brief raids in the 7th (by Chalukyas? Or Chach of Sindh?) and 9th centuries (by the Pratiharas).<br>
 <b>Explored:</b> Countries that were visited by Indians in antiquity.<br>
 """)
-    map.CSS(r"""
-    .indian-core {fill: #740001; color: #740001 !important;}
-    .fundamental-colonies {fill: #e80000; color: #e80000 !important;}
-    .brief-colonies {fill: #fc4e2b; color: #fc4e2b !important;}
-    .fundamentally-hindu-buddhist {fill: #f5820b; color: #f5820b !important;}
-    .deep-influence {fill: #a425d6; color: #a425d6 !important;}
-    .raided {fill: #936a27; color: #936a27 !important;}
-    .explored {fill: #698db3; color: #698db3 !important;}
-    .borderline {fill: #ff0000; color: #ff0000 !important;}
-    """)
-    map.show(out_json="../maps/akhand.json", out_html="../maps/akhand.html")
+    xatra.show(out_json="../maps/akhand.json", out_html="../maps/akhand.html")

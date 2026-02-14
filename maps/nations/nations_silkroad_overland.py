@@ -7,26 +7,24 @@ from xatra.loaders import gadm, naturalearth
 from xatra.territory_library import *
 from xatra.colorseq import LinearColorSequence
 from matplotlib.colors import LinearSegmentedColormap
-import maps.base_options
 
-def add_flags(map: xatra.Map):
-    map.Flag(label="VṚJISTHĀNA", value=VRJISTHANA, note="Vijayendra Kumar Mathur (1969), Aitihasik Sthanavali p 870: वृजिस्थान नामक एक ऐतिहासिक स्थान का उल्लेख प्रसिद्ध चीनी यात्री युवानच्वांग ने 'फो-लि शतंगना' नाम से किया है। सम्भवत: यह वर्तमान वज़ीरस्तान (पाकिस्तान) है।")
-    map.Flag(label="VARNU", value=VARNU)
-    map.Flag(label="VANAVYA", value=VANAVYA)
-    map.Flag(label="APRĪTA", value=APRITA, note="or Trīrāvatīka, modern Tirāh.")
-    map.Flag(label="SATTAGYDIA?", value=PSEUDOSATTAGYDIA_S, classes="names-unknown")
-    map.Flag(label="KAMBOJA", value=KAMBOJA)
-    map.Flag(label="KĀPIŚĀYANA", value=KAPISAYANA)
-    map.Flag(label="TRYAKŚYĀYAṆA", value=TRYAKSYAYANA, note = "or Dvīrāvatika, modern Dir; or Madhumant, modern Mohmand.")
-    map.Flag(
-        label="AŚVAKĀYANA",
-        value=ASVAKAYANA,
-        note="The Hastināyanas may have have been cognate with the Aśvakāyanas, or ruled the region around Puṣkalāvatī.",
-    )
-    map.Flag(label="AŚVĀYANA", value=ASVAYANA)
-    map.Flag(label="NIGRAHĀRA", value=NIGRAHARA)
-    map.Flag(label="URAŚĀ", value=URASA, note="Hazara")
-#     map.Flag(
+xatra.Flag(label="VṚJISTHĀNA", value=VRJISTHANA, note="Vijayendra Kumar Mathur (1969), Aitihasik Sthanavali p 870: वृजिस्थान नामक एक ऐतिहासिक स्थान का उल्लेख प्रसिद्ध चीनी यात्री युवानच्वांग ने 'फो-लि शतंगना' नाम से किया है। सम्भवत: यह वर्तमान वज़ीरस्तान (पाकिस्तान) है।")
+xatra.Flag(label="VARNU", value=VARNU)
+xatra.Flag(label="VANAVYA", value=VANAVYA)
+xatra.Flag(label="APRĪTA", value=APRITA, note="or Trīrāvatīka, modern Tirāh.")
+xatra.Flag(label="SATTAGYDIA?", value=PSEUDOSATTAGYDIA_S, classes="names-unknown")
+xatra.Flag(label="KAMBOJA", value=KAMBOJA)
+xatra.Flag(label="KĀPIŚĀYANA", value=KAPISAYANA)
+xatra.Flag(label="TRYAKŚYĀYAṆA", value=TRYAKSYAYANA, note = "or Dvīrāvatika, modern Dir; or Madhumant, modern Mohmand.")
+xatra.Flag(
+    label="AŚVAKĀYANA",
+    value=ASVAKAYANA,
+    note="The Hastināyanas may have have been cognate with the Aśvakāyanas, or ruled the region around Puṣkalāvatī.",
+)
+xatra.Flag(label="AŚVĀYANA", value=ASVAYANA)
+xatra.Flag(label="NIGRAHĀRA", value=NIGRAHARA)
+xatra.Flag(label="URAŚĀ", value=URASA, note="Hazara")
+#     xatra.Flag(
 #         label="ŚAVASA",
 #         value=SAVASA,
 #         note="""Of these Kekaya and Savasa may be
@@ -40,50 +38,48 @@ def add_flags(map: xatra.Map):
 #  Śavasa or Śvasa seems to be preserved in the modern name 
 #  Chhibha comprising Punch, Rajauri and Bhimbhara. - VS Agarwala Ch II, Sec 4.""",
 #     )
-    map.Flag(label="UḌḌIYĀNA", value=UDDIYANA)
-    map.Flag(label="DARADA", value=DARADA)
-    map.Flag(label="MARASA", value=LADAKH)
-    map.Flag(label="GEDROSIA", value=BALOCH)
-    map.Flag(label="KAMBOJA", value=KAMBOJA)
-    map.Flag(label="MERU", value=MERU)
-    map.Flag(label="ZARANJ", value=ZARANJ)
-    map.Flag(label="KANDAHAR", value=KANDAHAR)
-    map.Flag(label="HERAT", value=HERAT)
-    map.Flag(label="ROHITAGIRI", value=ROHITAGIRI)
-    map.Flag(label="PAKTHA", value=PAKTHA)
-    map.Flag(label="BAHLIKA", value=BACTRIA)
-    map.Flag(label="MARGUS", value=MARGIANA)
-    map.Flag(label="SOGD", value=SOGDIA_PROPER)
-    map.Flag(label="PRAKAṆVA", value=FERGHANA)
-    map.Flag(label="KHWAREZM", value=KHWAREZM)
-    map.Flag(label="KASHGAR", value=KASHGAR)
-    map.Flag(label="KHOTAN", value=KHOTAN)
-    map.Flag(label="AGNI", value=AGNI)
-    map.Flag(label="AKSU", value=AKSU)
-    map.Flag(label="KUCHA", value=KUCHA)
-    map.Flag(label="ROURAN", value=ROURAN)
-    map.Flag(label="QIEMO", value=QIEMO)
-    map.Flag(label="KORLA", value=KORLA)
-    map.Flag(label="TURFAN", value=TURFAN)
-    map.Flag(label="BHOṬA", value=TIBET)
-    map.Flag(label="YYY_HIMALAYAN", classes="wild-tracts", value=HIMALAYAN)
-    map.CSS(r"""
-    .names-unknown {fill: #444444; color: #444444 !important;}
-    .wild-tracts {fill: #888888; color: #888888 !important;}
-    .flag-label {font-size: 10px}
-    .path-label {font-size: 10px}
-    .river-label {font-size: 10px}
-    """
-    )
+xatra.Flag(label="UḌḌIYĀNA", value=UDDIYANA)
+xatra.Flag(label="DARADA", value=DARADA)
+xatra.Flag(label="MARASA", value=LADAKH)
+xatra.Flag(label="GEDROSIA", value=BALOCH)
+xatra.Flag(label="KAMBOJA", value=KAMBOJA)
+xatra.Flag(label="MERU", value=MERU)
+xatra.Flag(label="ZARANJ", value=ZARANJ)
+xatra.Flag(label="KANDAHAR", value=KANDAHAR)
+xatra.Flag(label="HERAT", value=HERAT)
+xatra.Flag(label="ROHITAGIRI", value=ROHITAGIRI)
+xatra.Flag(label="PAKTHA", value=PAKTHA)
+xatra.Flag(label="BAHLIKA", value=BACTRIA)
+xatra.Flag(label="MARGUS", value=MARGIANA)
+xatra.Flag(label="SOGD", value=SOGDIA_PROPER)
+xatra.Flag(label="PRAKAṆVA", value=FERGHANA)
+xatra.Flag(label="KHWAREZM", value=KHWAREZM)
+xatra.Flag(label="KASHGAR", value=KASHGAR)
+xatra.Flag(label="KHOTAN", value=KHOTAN)
+xatra.Flag(label="AGNI", value=AGNI)
+xatra.Flag(label="AKSU", value=AKSU)
+xatra.Flag(label="KUCHA", value=KUCHA)
+xatra.Flag(label="ROURAN", value=ROURAN)
+xatra.Flag(label="QIEMO", value=QIEMO)
+xatra.Flag(label="KORLA", value=KORLA)
+xatra.Flag(label="TURFAN", value=TURFAN)
+xatra.Flag(label="BHOṬA", value=TIBET)
+xatra.Flag(label="YYY_HIMALAYAN", classes="wild-tracts", value=HIMALAYAN)
+xatra.CSS(r"""
+.names-unknown {fill: #444444; color: #444444 !important;}
+.wild-tracts {fill: #888888; color: #888888 !important;}
+.flag-label {font-size: 10px}
+.path-label {font-size: 10px}
+.river-label {font-size: 10px}
+"""
+)
 
 if __name__ == "__main__":
-    map = xatra.Map()
-    maps.base_options.add_flags(map)
-    add_flags(map)
-    map.TitleBox("""
+    import maps.base_options
+    xatra.TitleBox("""
     Nations, not states, of the Overland Silk Road in antiquity. 
     Roughly valid in the period 800 BC to 1200, think of it as a 
     first-order approximation or a reference guide. 
     """)
-    map.show(out_json="../maps/nations_silkroad_overland.json", out_html="../maps/nations_silkroad_overland.html")
+    xatra.show(out_json="../maps/nations_silkroad_overland.json", out_html="../maps/nations_silkroad_overland.html")
 
