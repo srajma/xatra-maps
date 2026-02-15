@@ -64,7 +64,7 @@ xatra.Flag(
 )
 xatra.Flag(label="MĀLAVA", value=MALAVA)
 xatra.Flag(label="KṢUDRAKA", value=KSUDRAKA)
-xatra.Flag(label="LAVAPURA?", value=LAVAPURA | DOAB_RS_N - AUDUMBARA, classes="names-unknown")
+xatra.Flag(label="MADRA_EE", value=MADRA_EE, classes="names-unknown")
 xatra.Flag(label="SINDHU-SAUVIRA", value=SINDH)
 
 # xatra.Flag(label="PSEUDOSATTAGYDIA", value=PSEUDOSATTAGYDIA)

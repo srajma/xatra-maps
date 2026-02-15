@@ -113,7 +113,7 @@ xatra.Flag(label="KṢUDRAKA", value=KSUDRAKA)
 #  Mālavas, see e.g. <a href='https://www.ibiblio.org/britishraj/Jackson2/chapter04.html'>ibiblio.org/britishraj/Jackson2/chapter04.html</a>.
 #  The
 # """)
-xatra.Flag(label="???", value=LAVAPURA | DOAB_RS_N - AUDUMBARA, classes="flag-grey")
+xatra.Flag(label="MADRA_EE", value=MADRA_EE, classes="flag-grey")
 xatra.Flag(label="MADRAKĀRA", value=MADRAKARA)
 xatra.Flag(
     label="TRIGARTA",
