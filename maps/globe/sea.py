@@ -45,7 +45,7 @@ xatra.Point(
     show_label=True,
     classes="port-label-other",
     note=REF_MOTI_CHANDRA.format("p. 133")
-),
+)
 xatra.Point(
     label="Alassaṇḍa/<br>Yavanapura",
     position=[31.210757, 29.919430],
@@ -53,14 +53,14 @@ xatra.Point(
     show_label=True,
     classes="port-label-other",
     note=REF_MOTI_CHANDRA.format("p. 133")
-),
+)
 xatra.Point(
     label="Barbara?",
     position=[10.438412, 45.012126],
     icon=PORT_ICON,
     show_label=True,
     classes="port-label-other"
-),
+)
 xatra.Point(
     label="Antākhī",
     position=[36.209129, 36.178443],
@@ -68,19 +68,19 @@ xatra.Point(
     show_label=True,
     classes="port-label-other",
     note=REF_MOTI_CHANDRA.format("p. xiv")
-),
+)
 xatra.Point(
     label="Bāveru",
     position=[32.519873, 44.423970],
     icon=PORT_ICON,
     show_label=True,
     classes="port-label-other"
-),
+)
 # funny thing AI came up with, not real:
 # xatra.Point(
 #     label="Kālakācārya",
 #     position=[-0.789275, 36.428155]
-# ),
+# )
 xatra.Text(
     label="SIṂHALA",
     position=[7.526199, 80.774671],
@@ -90,88 +90,88 @@ xatra.Text(
     label="Pārasīka",
     position=[31.244868, 53.597872],
     classes="general-label-other general-label-other-parasika"
-),
+)
 xatra.Text(
     label="UTTARAKURU",
     position=[39.36, 83.41],
     classes="general-label-other general-label-other-uttarakuru"
-),
+)
 xatra.Text(
     label="BHOṬA",
     position=[32.55, 91.32],
     classes="general-label-other general-label-other-bhota"
-),
+)
 xatra.Text(
     label="Khuramāla Sea/<br>Pārasavāsa Sea",
     position=[26.191326, 52.671155],
     classes="general-label-other general-label-other-khuramala",
     note=REF_MOTI_CHANDRA.format("p. 61"),
-),
+)
 xatra.Text(
     label="Ratnākara Sea",
     position=[14.0, 63.5449],
     classes="general-label-other general-label-other-ocean general-label-other-ratnakara",
     note=REF_MOTI_CHANDRA.format("p. 44"),
-),
+)
 xatra.Text(
     label="Mahodadhi Sea",
     position=[14.0, 89.2090],
     classes="general-label-other general-label-other-ocean general-label-other-mahodadhi",
     note=REF_MOTI_CHANDRA.format("p. 44"),
-),
+)
 xatra.Text(
     label="Dadhimāla Sea",
     position=[20.083571, 38.700488],
     classes="general-label-other general-label-other-dadhimala",
     note=REF_MOTI_CHANDRA.format("p. 61, 63"),
-),
+)
 xatra.Text(
     label="Agnimāla Sea",
     position=[12.332840, 47.519639],
     classes="general-label-other general-label-other-agnimala",
     note=REF_MOTI_CHANDRA.format("p. 61, 63"),
-),
+)
 xatra.Text(
     label="Marukāntāra Desert",
     position=[18.953132, 35.475510],
     classes="general-label-other general-label-other-marukantara",
     note=REF_MOTI_CHANDRA.format("p. 61, 63"),
-),
+)
 xatra.Text(
     label=colon("Nīlakuṣamāla?", "(Suez gulf)"),
     position=[28.576944, 33.147515],
     classes="general-label-other general-label-other-nilakusamala",
     note=REF_MOTI_CHANDRA.format("p. 61, 63"),
-),
+)
 xatra.Text(
     label=colon("Nalamāla?", "(old Suez canal)"),
     position=[31.094234, 32.296720],
     classes="general-label-other general-label-other-nalamala",
     note=REF_MOTI_CHANDRA.format("p. 61, 63"),
-),
+)
 xatra.Text(
     label="Yavana",
     position=[39.134265, 21.801574],
     classes="general-label-other general-label-other-yavana",
     note=REF_MOTI_CHANDRA.format("p. 133"),
-),
+)
 xatra.Text(
     label="Parama-yavana",
     position=[38.453380, 29.463347],
     classes="general-label-other general-label-other-paramayavana",
     note=REF_MOTI_CHANDRA.format("p. 133"),
-),
+)
 xatra.Text(
     label="Roma-Viṣaya",
     position=[43.347301, 11.792144],
     classes="general-label-other general-label-other-romavisaya",
-),
+)
 xatra.Text(
     label="Valabhāmukha Sea",
     position=[35.392349, 19.468104],
     classes="general-label-other general-label-other-valabhamukha",
     note=REF_MOTI_CHANDRA.format("p. 61, 63"),
-),
+)
 # IT'S DOING KALAKACARYA AGAIN!!!
 # xatra.Text(
 #     label="Kālakācārya",
@@ -183,22 +183,22 @@ xatra.Text(
     label="Yavana",
     position=[33.964831, 27.000472],
     classes="general-label-other general-label-other-yavana-big",
-),
+)
 xatra.Text(
     label="Jambudvīpa",
     position=[21.407506, 78.480723],
     classes="general-label-other general-label-other-jambudvipa",
-),
+)
 xatra.Text(
     label="Cīnā",
     position=[30.750277, 114.330864],
     classes="general-label-other general-label-other-cina",
-),
+)
 xatra.Text(
     label="Kālayavana?",
     position=[10.068956, 38.311893],
     classes="general-label-other general-label-other-kalayavana",
-),
+)
 
 xatra.CSS("""
     .general-label-other {
