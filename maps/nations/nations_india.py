@@ -2,11 +2,9 @@
 Can be regarded as a first-order approximation, roughly valid in  
 the period between 800 BC and 800 AD."""
 
-from matplotlib.colors import LinearSegmentedColormap
 import xatra
-from xatra.loaders import gadm, naturalearth
+from xatra.loaders import gadm
 from xatra.territory_library import *
-from xatra.colorseq import LinearColorSequence
 
 xatra.Flag(label="VṚJISTHĀNA", value=VRJISTHANA, note="Vijayendra Kumar Mathur (1969), Aitihasik Sthanavali p 870: वृजिस्थान नामक एक ऐतिहासिक स्थान का उल्लेख प्रसिद्ध चीनी यात्री युवानच्वांग ने 'फो-लि शतंगना' नाम से किया है। सम्भवत: यह वर्तमान वज़ीरस्तान (पाकिस्तान) है।")
 xatra.Flag(label="VARNU", value=VARNU)

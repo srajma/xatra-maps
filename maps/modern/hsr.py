@@ -81,287 +81,284 @@ CITIES = {
 }
 
 
-def add_flags(map: xatra.Map):
-    # MUMBAI - DELHI LINE
-    ## MUMBAI-AHMEDABAD
-    map.Path(
-        label="MUMBAI-DELHI",
-        value=[
-            CITIES["Mumbai"],
-            CITIES["Surat"],
-            CITIES["Vadodara"],
-            CITIES["Ahmedabad"],
-        ],
-        classes="hsr hsr-economic hsr-mumbai-delhi",
-        show_label=True,
-    )
-    ## AHMEDABAD-DELHI
-    map.Path(
-        label="MUMBAI-DELHI",
-        value=[
-            CITIES["Ahmedabad"],
-            CITIES["Udaipur"],
-            CITIES["Ajmer"],
-            CITIES["Jaipur"],
-            CITIES["Delhi"],
-        ],
-        classes="hsr hsr-economic hsr-mumbai-delhi",
-        show_label=True,
-    )
+# MUMBAI - DELHI LINE
+## MUMBAI-AHMEDABAD
+xatra.Path(
+    label="MUMBAI-DELHI",
+    value=[
+        CITIES["Mumbai"],
+        CITIES["Surat"],
+        CITIES["Vadodara"],
+        CITIES["Ahmedabad"],
+    ],
+    classes="hsr hsr-economic hsr-mumbai-delhi",
+    show_label=True,
+)
+## AHMEDABAD-DELHI
+xatra.Path(
+    label="MUMBAI-DELHI",
+    value=[
+        CITIES["Ahmedabad"],
+        CITIES["Udaipur"],
+        CITIES["Ajmer"],
+        CITIES["Jaipur"],
+        CITIES["Delhi"],
+    ],
+    classes="hsr hsr-economic hsr-mumbai-delhi",
+    show_label=True,
+)
 
-    # Dehati-Bachao Dehati-Padhao Line
-    ## Jammu-Delhi
-    map.Path(
-        label="NORTHERN",
-        value=[
-            CITIES["Jammu"],
-            CITIES["Pathankot"],
-            CITIES["Amritsar"],
-            CITIES["Jalandhar"],
-            CITIES["Ludhiana"],
-            CITIES["Chandigarh"],
-            CITIES["Ambala"],
-            CITIES["Delhi"],
-        ],
-        classes="hsr hsr-social hsr-dehati",
-        note="DEHATI BACHAO DEHATI PADHAO"
-    )
-    ## Delhi-Patna
-    map.Path(
-        label="NORTHERN",
-        value=[
-            CITIES["Delhi"],
-            CITIES["Agra"],
-            CITIES["Kannauj"],
-            CITIES["Kanpur"],
-            CITIES["Rae Bareli"],
-            CITIES["Prayagraj"],
-            CITIES["Varanasi"],
-            CITIES["Patna"],
-        ],
-        classes="hsr hsr-social hsr-dehati",
-        show_label=True,
-        note="DEHATI BACHAO DEHATI PADHAO"
-    )
-    ## Patna-Kolkata
-    map.Path(
-        label="NORTHERN",
-        value=[CITIES["Patna"], CITIES["Gaya"], CITIES["Dhanbad"], CITIES["Kolkata"]],
-        classes="hsr hsr-social hsr-dehati",
-        note="DEHATI BACHAO DEHATI PADHAO"
-    )
-    ## Lucknow Extension
-    map.Path(
-        label="NORTHERN",
-        value=[CITIES["Kanpur"], CITIES["Lucknow"]],
-        classes="hsr hsr-social hsr-dehati",
-        note="DEHATI BACHAO DEHATI PADHAO"
-    )
-    ## Ayodhya Extension
-    map.Path(
-        label="NORTHERN",
-        value=[CITIES["Prayagraj"], CITIES["Ayodhya"]],
-        classes="hsr hsr-social hsr-dehati",
-        note="DEHATI BACHAO DEHATI PADHAO"
-    )
-    ## Bihar Extension
-    map.Path(
-        label="NORTHERN",
-        value=[
-            CITIES["Patna"],
-            CITIES["Muzaffarpur"],
-            CITIES["Darbhanga"],
-            CITIES["Purnia"],
-            CITIES["Kishanganj"],
-        ],
-        classes="hsr hsr-social hsr-dehati",
-        note="DEHATI BACHAO DEHATI PADHAO"
-    )
+# Dehati-Bachao Dehati-Padhao Line
+## Jammu-Delhi
+xatra.Path(
+    label="NORTHERN",
+    value=[
+        CITIES["Jammu"],
+        CITIES["Pathankot"],
+        CITIES["Amritsar"],
+        CITIES["Jalandhar"],
+        CITIES["Ludhiana"],
+        CITIES["Chandigarh"],
+        CITIES["Ambala"],
+        CITIES["Delhi"],
+    ],
+    classes="hsr hsr-social hsr-dehati",
+    note="DEHATI BACHAO DEHATI PADHAO"
+)
+## Delhi-Patna
+xatra.Path(
+    label="NORTHERN",
+    value=[
+        CITIES["Delhi"],
+        CITIES["Agra"],
+        CITIES["Kannauj"],
+        CITIES["Kanpur"],
+        CITIES["Rae Bareli"],
+        CITIES["Prayagraj"],
+        CITIES["Varanasi"],
+        CITIES["Patna"],
+    ],
+    classes="hsr hsr-social hsr-dehati",
+    show_label=True,
+    note="DEHATI BACHAO DEHATI PADHAO"
+)
+## Patna-Kolkata
+xatra.Path(
+    label="NORTHERN",
+    value=[CITIES["Patna"], CITIES["Gaya"], CITIES["Dhanbad"], CITIES["Kolkata"]],
+    classes="hsr hsr-social hsr-dehati",
+    note="DEHATI BACHAO DEHATI PADHAO"
+)
+## Lucknow Extension
+xatra.Path(
+    label="NORTHERN",
+    value=[CITIES["Kanpur"], CITIES["Lucknow"]],
+    classes="hsr hsr-social hsr-dehati",
+    note="DEHATI BACHAO DEHATI PADHAO"
+)
+## Ayodhya Extension
+xatra.Path(
+    label="NORTHERN",
+    value=[CITIES["Prayagraj"], CITIES["Ayodhya"]],
+    classes="hsr hsr-social hsr-dehati",
+    note="DEHATI BACHAO DEHATI PADHAO"
+)
+## Bihar Extension
+xatra.Path(
+    label="NORTHERN",
+    value=[
+        CITIES["Patna"],
+        CITIES["Muzaffarpur"],
+        CITIES["Darbhanga"],
+        CITIES["Purnia"],
+        CITIES["Kishanganj"],
+    ],
+    classes="hsr hsr-social hsr-dehati",
+    note="DEHATI BACHAO DEHATI PADHAO"
+)
 
-    # Akaravanti Line
-    ## Akaravanti Main Line
-    map.Path(
-        label="AKARAVANTI",
-        value=[
-            CITIES["Vadodara"],
-            CITIES["Indore"],
-            CITIES["Bhopal"],
-            CITIES["Vidisha"],
-            CITIES["Jabalpur"],
-        ],
-        classes="hsr hsr-political hsr-akaravanti",
-        show_label=True,
-    )
-    ## Dakshinapatha Extension
-    map.Path(
-        label="AKARAVANTI LINE",
-        value=[CITIES["Gondia"], CITIES["Jabalpur"], CITIES["Varanasi"]],
-        classes="hsr hsr-political hsr-akaravanti",
-    )
+# Akaravanti Line
+## Akaravanti Main Line
+xatra.Path(
+    label="AKARAVANTI",
+    value=[
+        CITIES["Vadodara"],
+        CITIES["Indore"],
+        CITIES["Bhopal"],
+        CITIES["Vidisha"],
+        CITIES["Jabalpur"],
+    ],
+    classes="hsr hsr-political hsr-akaravanti",
+    show_label=True,
+)
+## Dakshinapatha Extension
+xatra.Path(
+    label="AKARAVANTI LINE",
+    value=[CITIES["Gondia"], CITIES["Jabalpur"], CITIES["Varanasi"]],
+    classes="hsr hsr-political hsr-akaravanti",
+)
 
-    # Maharashtra Line
-    map.Path(
-        label="MAHARASHTRA",
-        value=[
-            CITIES["Mumbai"],
-            CITIES["Nashik"],
-            CITIES["Aurangabad"],
-            CITIES["Amaravati"],
-            CITIES["Nagpur"],
-            CITIES["Gondia"],
-        ],
-        classes="hsr hsr-social hsr-maharashtra",
-        show_label=True,
-    )
+# Maharashtra Line
+xatra.Path(
+    label="MAHARASHTRA",
+    value=[
+        CITIES["Mumbai"],
+        CITIES["Nashik"],
+        CITIES["Aurangabad"],
+        CITIES["Amaravati"],
+        CITIES["Nagpur"],
+        CITIES["Gondia"],
+    ],
+    classes="hsr hsr-social hsr-maharashtra",
+    show_label=True,
+)
 
-    # MUMBAI - BANGALORE LINE
-    map.Path(
-        label="MUM-BLR",
-        value=[
-            CITIES["Mumbai"],
-            CITIES["Pune"],
-            CITIES["Kolhapur"],
-            CITIES["Belgaum"],
-            CITIES["Hubli"],
-            CITIES["Bangalore"],
-        ],
-        classes="hsr hsr-political hsr-maharashtra",
-        show_label=True,
-    )
+# MUMBAI - BANGALORE LINE
+xatra.Path(
+    label="MUM-BLR",
+    value=[
+        CITIES["Mumbai"],
+        CITIES["Pune"],
+        CITIES["Kolhapur"],
+        CITIES["Belgaum"],
+        CITIES["Hubli"],
+        CITIES["Bangalore"],
+    ],
+    classes="hsr hsr-political hsr-maharashtra",
+    show_label=True,
+)
 
-    # MUMBAI - HYDERABAD LINE
-    map.Path(
-        label="MUM-HYD",
-        value=[
-            CITIES["Pune"],
-            CITIES["Solapur"],
-            CITIES["Gulbarga"],
-            CITIES["Hyderabad"],
-        ],
-        classes="hsr hsr-economic hs-optional hsr-mumhyd",
-        show_label=True,
-    )
+# MUMBAI - HYDERABAD LINE
+xatra.Path(
+    label="MUM-HYD",
+    value=[
+        CITIES["Pune"],
+        CITIES["Solapur"],
+        CITIES["Gulbarga"],
+        CITIES["Hyderabad"],
+    ],
+    classes="hsr hsr-economic hs-optional hsr-mumhyd",
+    show_label=True,
+)
 
-    # BANGALORE - HYDERABAD LINE
-    map.Path(
-        label="BLR-HYD",
-        value=[CITIES["Bangalore"], CITIES["Hyderabad"]],
-        classes="hsr hsr-economic hs-optional hsr-blrhyd",
-        show_label=True,
-    )
+# BANGALORE - HYDERABAD LINE
+xatra.Path(
+    label="BLR-HYD",
+    value=[CITIES["Bangalore"], CITIES["Hyderabad"]],
+    classes="hsr hsr-economic hs-optional hsr-blrhyd",
+    show_label=True,
+)
 
-    # MOOLNIVASI LINE
-    map.Path(
-        label="MOOLNIVASI",
-        value=[
-            CITIES["Gondia"],
-            CITIES["Raipur"],
-            CITIES["Ranchi"],
-            CITIES["Dhanbad"],
-        ],
-        classes="hsr hsr-political hsr-optional hsr-moolnivasi",
-        show_label=True,
-    )
+# MOOLNIVASI LINE
+xatra.Path(
+    label="MOOLNIVASI",
+    value=[
+        CITIES["Gondia"],
+        CITIES["Raipur"],
+        CITIES["Ranchi"],
+        CITIES["Dhanbad"],
+    ],
+    classes="hsr hsr-political hsr-optional hsr-moolnivasi",
+    show_label=True,
+)
 
-    # EAST COAST LINE
-    ## Main line
-    map.Path(
-        label="EAST COAST",
-        value=[
-            CITIES["Kolkata"],
-            CITIES["Bhubaneswar"],
-            CITIES["Visakhapatnam"],
-            CITIES["Vijayawada"],
-            CITIES["Ongole"],
-            CITIES["Nellore"],
-            CITIES["Chennai"],
-        ],
-        classes="hsr hsr-political hsr-ec",
-        show_label=True,
-    )
-    ## Hyderabad Extension
-    map.Path(
-        label="EAST COAST",
-        value=[CITIES["Vijayawada"], CITIES["Hyderabad"]],
-        classes="hsr hsr-political hsr-ec",
-    )
+# EAST COAST LINE
+## Main line
+xatra.Path(
+    label="EAST COAST",
+    value=[
+        CITIES["Kolkata"],
+        CITIES["Bhubaneswar"],
+        CITIES["Visakhapatnam"],
+        CITIES["Vijayawada"],
+        CITIES["Ongole"],
+        CITIES["Nellore"],
+        CITIES["Chennai"],
+    ],
+    classes="hsr hsr-political hsr-ec",
+    show_label=True,
+)
+## Hyderabad Extension
+xatra.Path(
+    label="EAST COAST",
+    value=[CITIES["Vijayawada"], CITIES["Hyderabad"]],
+    classes="hsr hsr-political hsr-ec",
+)
 
-    # West Coast Line
-    map.Path(
-        label="WEST COAST",
-        value=[
-            CITIES["Mumbai"],
-            CITIES["Goa"],
-            CITIES["Mangalore"],
-        ],
-        classes="hsr hsr-economic hsr-optional hsr-wc",
-        show_label=True,
-    )
+# West Coast Line
+xatra.Path(
+    label="WEST COAST",
+    value=[
+        CITIES["Mumbai"],
+        CITIES["Goa"],
+        CITIES["Mangalore"],
+    ],
+    classes="hsr hsr-economic hsr-optional hsr-wc",
+    show_label=True,
+)
 
-    # BANGALORE - MANGALORE LINE
-    map.Path(
-        label="BLR-MGL",
-        value=[CITIES["Bangalore"], CITIES["Mysore"], CITIES["Mangalore"]],
-        classes="hsr hsr-economic hsr-optional hsr-blrmgl",
-    )
+# BANGALORE - MANGALORE LINE
+xatra.Path(
+    label="BLR-MGL",
+    value=[CITIES["Bangalore"], CITIES["Mysore"], CITIES["Mangalore"]],
+    classes="hsr hsr-economic hsr-optional hsr-blrmgl",
+)
 
-    # KERALA LINE
-    map.Path(
-        label="KERALA",
-        value=[
-            CITIES["Mangalore"],
-            CITIES["Kochi"],
-            CITIES["Thiruvananthapuram"],
-        ],
-        classes="hsr hsr-economic hsr-optional hsr-kerala",
-    )
+# KERALA LINE
+xatra.Path(
+    label="KERALA",
+    value=[
+        CITIES["Mangalore"],
+        CITIES["Kochi"],
+        CITIES["Thiruvananthapuram"],
+    ],
+    classes="hsr hsr-economic hsr-optional hsr-kerala",
+)
 
-    # BANGALORE - CHENNAI LINE
-    map.Path(
-        label="BLR-CHN",
-        value=[CITIES["Bangalore"], CITIES["Chennai"]],
-        classes="hsr hsr-economic hsr-optional hsr-blrchn",
-    )
+# BANGALORE - CHENNAI LINE
+xatra.Path(
+    label="BLR-CHN",
+    value=[CITIES["Bangalore"], CITIES["Chennai"]],
+    classes="hsr hsr-economic hsr-optional hsr-blrchn",
+)
 
-    # TAMIL LINE
-    map.Path(
-        label="TAMIL",
-        value=[
-            CITIES["Chennai"],
-            CITIES["Tanjore"],
-            CITIES["Madurai"],
-            CITIES["Thiruvananthapuram"],
-        ],
-        classes="hsr hsr-economic hsr-optional hsr-tamil",
-    )
+# TAMIL LINE
+xatra.Path(
+    label="TAMIL",
+    value=[
+        CITIES["Chennai"],
+        CITIES["Tanjore"],
+        CITIES["Madurai"],
+        CITIES["Thiruvananthapuram"],
+    ],
+    classes="hsr hsr-economic hsr-optional hsr-tamil",
+)
 
-    # BANGALORE - KERALA LINE
-    map.Path(
-        label="BLR-KER",
-        value=[CITIES["Bangalore"], CITIES["Coimbatore"], CITIES["Kochi"]],
-        classes="hsr hsr-economic hsr-optional hsr-blrker",
-    )
+# BANGALORE - KERALA LINE
+xatra.Path(
+    label="BLR-KER",
+    value=[CITIES["Bangalore"], CITIES["Coimbatore"], CITIES["Kochi"]],
+    classes="hsr hsr-economic hsr-optional hsr-blrker",
+)
 
-    # HYDERABAD-NAGPUR LINE
-    map.Path(
-        label="HYD-NGP",
-        value=[CITIES["Hyderabad"], CITIES["Nagpur"]],
-        classes="hsr hsr-economic hsr-optional hsr-mumhyd",
-    )
+# HYDERABAD-NAGPUR LINE
+xatra.Path(
+    label="HYD-NGP",
+    value=[CITIES["Hyderabad"], CITIES["Nagpur"]],
+    classes="hsr hsr-economic hsr-optional hsr-mumhyd",
+)
 
-    map.CSS(r"""
-    .hsr-economic {stroke: blue; color: blue}
-    .hsr-political {stroke: red; color: red}
-    .hsr-social {stroke: green; color: green}
-    .hsr-optional {stroke-dasharray: 5,5; opacity: 0.4}
-    """)
+xatra.CSS(r"""
+.hsr-economic {stroke: blue; color: blue}
+.hsr-political {stroke: red; color: red}
+.hsr-social {stroke: green; color: green}
+.hsr-optional {stroke-dasharray: 5,5; opacity: 0.4}
+""")
 
 
 if __name__ == "__main__":
-    map = xatra.Map()
-    maps.base_options.add_flags(map)
-    add_flags(map)
-    map.TitleBox(f"""
+    import maps.base_options
+    xatra.TitleBox(f"""
         <p><b>High-speed rail network to BVILD</b></p>
         <p><span style='color: blue; font-weight: bold'>Blue:</span> Economic lines</p>
         <p><span style='color: green; font-weight: bold'>Green:</span> Social lines</p>
@@ -369,4 +366,4 @@ if __name__ == "__main__":
         <p>Thick lines are the bare minimum. Dashed lines are still very desirable.</p>
         <p><b>Hover over each line</b> to see its name and purpose.</p>
     """)
-    map.show(out_json="../maps/hsr.json", out_html="../maps/hsr.html")
+    xatra.show(out_json="../maps/hsr.json", out_html="../maps/hsr.html")
