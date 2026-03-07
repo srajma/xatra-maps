@@ -63,7 +63,7 @@ xatra.Flag(label="ROURAN", value=ROURAN)
 xatra.Flag(label="QIEMO", value=QIEMO)
 xatra.Flag(label="KORLA", value=KORLA)
 xatra.Flag(label="TURFAN", value=TURFAN)
-xatra.Flag(label="BHOṬA", value=TIBET)
+xatra.Flag(label="BHOṬA", value=BHOTA)
 xatra.Flag(label="YYY_HIMALAYAN", classes="wild-tracts", value=HIMALAYAN)
 xatra.CSS(r"""
 .names-unknown {fill: #444444; color: #444444 !important;}

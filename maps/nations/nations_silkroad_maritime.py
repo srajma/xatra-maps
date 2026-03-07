@@ -9,7 +9,7 @@ from xatra.territory_library import *
 from xatra.colorseq import LinearColorSequence
 
 
-xatra.Flag(label="ZZZ_TIBET_BURMA_INTERM", classes="names-unknown", value=TIBET_BURMA_INTERM)
+xatra.Flag(label="ZZZ_BHOTA_BURMA_INTERM", classes="names-unknown", value=BHOTA_BURMA_INTERM)
 xatra.Flag(label="ZZZ_YUNNAN_BURMA_INTERM", classes="names-unknown", value=YUNNAN_BURMA_INTERM)
 xatra.Flag(label="ZZZ_KAREN", classes="names-unknown", value=KAREN)
 xatra.Flag(label="ZZZ_SIAM_BURMA_INTERM", classes="names-unknown", value=SIAM_BURMA_INTERM)

@@ -11,11 +11,11 @@ xatra.Flag(label="GULF", value=GULF)
 xatra.Flag(label="AFRICA_EAST_SPOTTY", value=AFRICA_EAST_SPOTTY)
 xatra.Flag(label="LEVANT", value=LEVANT)
 xatra.Flag(label="IRANIC", value=IRANIC)
-xatra.Flag(label="JAMBUDVĪPA", value=JAMBUDVIPA)
+xatra.Flag(label="BHĀRATA", value=BHARATA)
 xatra.Flag(label="SIMHALA", value=SIMHALA)
 xatra.Flag(label="CHINA", value=CHINA_PROPER | NORTH_VIETNAM)
 xatra.Flag(label="UTTARAKURU", value=TARIM)
-xatra.Flag(label="BHUTA", value=TIBET)
+xatra.Flag(label="BHOṬA", value=BHOTA)
 xatra.Point(
     label="Dvīpa Sukhadara",
     position=[12.486956, 53.826729],

@@ -21,7 +21,7 @@ BRIEF_COLONIES = (
     | MITANNI
     | ARMENIA
 )
-FUNDAMENTAL_HB = TIBET | JAPAN | KOREA | SOGDIA | MARGIANA
+FUNDAMENTAL_HB = BHOTA | JAPAN | KOREA | SOGDIA | MARGIANA
 DEEP_INFLUENCE = CHINA_PROPER | MANCHURIA | BUDDHIST_RUSSIA | NORTH_VIETNAM
 EXPLORED = (MEDITERRANEAN_EAST | AFRICA_EAST_SPOTTY | GULF | LEVANT | IRANIC) - (
     DEEP_INFLUENCE
@@ -42,7 +42,7 @@ xatra.Flag(
 )
 xatra.Flag(label="DARADA", value=DARADA, classes="borderline")
 xatra.Flag(label="KAMBOJA", value = GREATER_KAMBOJA, classes="borderline")
-xatra.Flag(label="HIMALAYAS", value=YYY_HIMALAYAN - BRIEF_COLONIES - DARADA - GREATER_KAMBOJA - TIBET, classes="borderline")
+xatra.Flag(label="HIMALAYAS", value=YYY_HIMALAYAN - BRIEF_COLONIES - DARADA - GREATER_KAMBOJA - BHOTA, classes="borderline")
 xatra.Flag(label="BRIEF COLONIES", value=BRIEF_COLONIES, classes="brief-colonies")
 xatra.Flag(
     label="FUNDAMENTALLY HINDU/BUDDHIST",
